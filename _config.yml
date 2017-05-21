@@ -1,15 +1,12 @@
 # Site settings
-title: Clean Blog
+title: Clean's Home
 header-img: img/home-bg.jpg
-email: your-email@yourdomain.com
-copyright_name: Your/Project/Corporate Name
+email: clean_li@yahoo.com
+copyright_name: Clean Li
 description: "Write your site description here. It will be used as your sites meta description as well!"
-baseurl: "/startbootstrap-clean-blog-jekyll"
-url: "http://yourdomain.com"
-twitter_username: SBootstrap
-github_username:  davidtmiller
-facebook_username:  StartBootstrap
-email_username:  your-email@yourdomain.com
+baseurl: "/cleanhome"
+url: "http://cleanhome.com"
+github_username:  cleanli
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
@@ -19,7 +16,7 @@ email_username:  your-email@yourdomain.com
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
-paginate: 5
+paginate: 8
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 gems: [jekyll-paginate, jekyll-feed]
