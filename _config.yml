@@ -15,7 +15,7 @@ github_username:  cleanli
 # Build settings
 markdown: kramdown
 highlighter: rouge
-permalink: pretty
+permalink: date
 paginate: 8
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 

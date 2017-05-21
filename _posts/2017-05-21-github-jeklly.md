@@ -4,6 +4,7 @@ title:      "【原创】Github建博客"
 subtitle:   "记录及总结，备忘"
 date:       2017-05-21 10:38:45 +0800
 author:     "Clean Li"
+categories: tech
 header-img: "img/post-bg-01.jpg"
 ---
 Github使用jeklly生成博客，主要步骤是先找一个博客模版，然后把自己的文章添加到`_post`目录，再提交到Github上去，就完成了。
@@ -102,6 +103,9 @@ baseurl: /cleanhome
 .highlight .ge { font-style: italic } /* Generic.Emph */
 .highlight .gs { font-weight: bold } /* Generic.Strong */
 {% endhighlight %}
+
+这个网页可以查支持的语法及其short name：<br>
+[Available lexers](http://pygments.org/docs/lexers/#lexers-for-css-and-related-stylesheet-formats)
 
 做相关配置及调整之后，依然可以运行这个命令本地观察一下效果：
 ```shell

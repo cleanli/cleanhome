@@ -4,6 +4,7 @@ title:      "上海购物"
 subtitle:   "资料收集"
 date:       2017-05-21 19:29:33 +0800
 author:     "Clean Li"
+categories: life
 header-img: "img/post-bg-01.jpg"
 ---
 <a href="#">
