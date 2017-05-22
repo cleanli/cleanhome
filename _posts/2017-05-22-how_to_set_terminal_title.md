@@ -3,6 +3,7 @@ layout:     post
 title:      "Ubuntu16.04下设置终端的标题"
 date:       2017-05-22 22:37:25 +0800
 author:     "Clean Li"
+categories: tech
 header-img: "img/post-bg-03.jpg"
 ---
 
