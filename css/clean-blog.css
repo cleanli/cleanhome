@@ -225,6 +225,7 @@ hr.small {
   margin-bottom: 8px;
 }
 .post-preview > a > .post-subtitle {
+  font-size: 16px;
   margin: 0;
   font-weight: 300;
   margin-bottom: 8px;

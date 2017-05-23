@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Ubuntu16.04下设置终端的标题"
-date:       2017-05-22 22:37:25 +0800
+date:       2017-05-19 14:06:25 +0800
 author:     "Clean Li"
 categories: tech
 header-img: "img/post-bg-03.jpg"
@@ -24,3 +24,5 @@ st ()
 $ st NewTitle
 ```
 就可以看到标题已经改成“NewTitle”了。
+
+源文档 <https://askubuntu.com/questions/774532/how-to-change-terminal-title-in-ubuntu-16-04>
