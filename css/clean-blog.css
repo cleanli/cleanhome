@@ -6,12 +6,12 @@
 
 body {
   font-family: 'Lora', 'Times New Roman', serif;
-  font-size: 20px;
+  font-size: 16px;
   color: #404040;
 }
 p {
   line-height: 1.5;
-  margin: 30px 0;
+  margin: 24px 0;
 }
 p a {
   text-decoration: underline;
@@ -41,9 +41,9 @@ blockquote {
   font-style: italic;
 }
 hr.small {
-  max-width: 100px;
-  margin: 15px auto;
-  border-width: 4px;
+  max-width: 80px;
+  margin: 12px auto;
+  border-width: 3px;
   border-color: white;
 }
 .navbar-custom {
@@ -60,7 +60,7 @@ hr.small {
 }
 .navbar-custom .nav li a {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 7px;
   font-weight: 800;
   letter-spacing: 1px;
 }
@@ -71,7 +71,7 @@ hr.small {
   }
   .navbar-custom .navbar-brand {
     color: white;
-    padding: 20px;
+    padding: 16px;
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
@@ -79,7 +79,7 @@ hr.small {
   }
   .navbar-custom .nav li a {
     color: white;
-    padding: 20px;
+    padding: 16px;
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
@@ -141,19 +141,19 @@ hr.small {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 .intro-header .site-heading,
 .intro-header .post-heading,
 .intro-header .page-heading {
-  padding: 100px 0 50px;
+  padding: 80px 0 40px;
   color: white;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
   .intro-header .post-heading,
   .intro-header .page-heading {
-    padding: 150px 0;
+    padding: 120px 0;
   }
 }
 .intro-header .site-heading,
@@ -163,25 +163,25 @@ hr.small {
 .intro-header .site-heading h1,
 .intro-header .page-heading h1 {
   margin-top: 0;
-  font-size: 50px;
+  font-size: 40px;
 }
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
-  font-size: 24px;
+  font-size: 19px;
   line-height: 1.1;
   display: block;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
-  margin: 10px 0 0;
+  margin: 8px 0 0;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading h1,
   .intro-header .page-heading h1 {
-    font-size: 80px;
+    font-size: 64px;
   }
 }
 .intro-header .post-heading h1 {
-  font-size: 35px;
+  font-size: 28px;
 }
 .intro-header .post-heading .subheading,
 .intro-header .post-heading .meta {
@@ -190,25 +190,25 @@ hr.small {
 }
 .intro-header .post-heading .subheading {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 24px;
-  margin: 10px 0 30px;
+  font-size: 19px;
+  margin: 8px 0 24px;
   font-weight: 600;
 }
 .intro-header .post-heading .meta {
   font-family: 'Lora', 'Times New Roman', serif;
   font-style: italic;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 16px;
 }
 .intro-header .post-heading .meta a {
   color: white;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
-    font-size: 55px;
+    font-size: 44px;
   }
   .intro-header .post-heading .subheading {
-    font-size: 30px;
+    font-size: 24px;
   }
 }
 .post-preview > a {
@@ -220,18 +220,18 @@ hr.small {
   color: #0085a1;
 }
 .post-preview > a > .post-title {
-  font-size: 30px;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  font-size: 24px;
+  margin-top: 24px;
+  margin-bottom: 8px;
 }
 .post-preview > a > .post-subtitle {
   margin: 0;
   font-weight: 300;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .post-preview > .post-meta {
   color: #808080;
-  font-size: 18px;
+  font-size: 14px;
   font-style: italic;
   margin-top: 0;
 }
@@ -246,38 +246,38 @@ hr.small {
 }
 @media only screen and (min-width: 768px) {
   .post-preview > a > .post-title {
-    font-size: 36px;
+    font-size: 28px;
   }
 }
 .section-heading {
-  font-size: 36px;
-  margin-top: 60px;
+  font-size: 28px;
+  margin-top: 48px;
   font-weight: 700;
 }
 .caption {
   text-align: center;
-  font-size: 14px;
-  padding: 10px;
+  font-size: 11px;
+  padding: 8px;
   font-style: italic;
   margin: 0;
   display: block;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 footer {
-  padding: 50px 0 65px;
+  padding: 40px 0 52px;
 }
 footer .list-inline {
   margin: 0;
   padding: 0;
 }
 footer .copyright {
-  font-size: 14px;
+  font-size: 11px;
   text-align: center;
   margin-bottom: 0;
 }
 .floating-label-form-group {
-  font-size: 14px;
+  font-size: 11px;
   position: relative;
   margin-bottom: 0;
   padding-bottom: 0.5em;
@@ -291,7 +291,7 @@ footer .copyright {
   padding-left: 0;
   border: none;
   border-radius: 0;
-  font-size: 1.5em;
+  font-size: 1.2em;
   background: none;
   box-shadow: none !important;
   resize: none;
@@ -302,7 +302,7 @@ footer .copyright {
   position: relative;
   top: 2em;
   margin: 0;
-  font-size: 0.85em;
+  font-size: 0.64em;
   line-height: 1.764705882em;
   vertical-align: middle;
   vertical-align: baseline;
@@ -313,7 +313,7 @@ footer .copyright {
   transition: top 0.3s ease,opacity 0.3s ease;
 }
 .floating-label-form-group::not(:first-child) {
-  padding-left: 14px;
+  padding-left: 11px;
   border-left: 1px solid #eeeeee;
 }
 .floating-label-form-group-with-value label {
@@ -329,15 +329,15 @@ form .row:first-child .floating-label-form-group {
 .btn {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 1px;
   border-radius: 0;
-  padding: 15px 25px;
+  padding: 12px 20px;
 }
 .btn-lg {
-  font-size: 16px;
-  padding: 25px 35px;
+  font-size: 12px;
+  padding: 20px 28px;
 }
 .btn-default:hover,
 .btn-default:focus {
@@ -346,24 +346,24 @@ form .row:first-child .floating-label-form-group {
   color: white;
 }
 .pager {
-  margin: 20px 0 0;
+  margin: 16px 0 0;
 }
 .pager li > a,
 .pager li > span {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: 1px;
-  padding: 10px 5px;
+  padding: 8px 4px;
   background-color: white;
   border-radius: 0;
 }
 @media only screen and (min-width: 768px) {
   .pager li > a,
   .pager li > span {
-    font-size: 14px;
-    padding: 15px 25px;
+    font-size: 11px;
+    padding: 12px 20px;
   }
 }
 .pager li > a:hover,
