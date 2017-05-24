@@ -4,6 +4,7 @@ title:      "调整virtual box硬盘大小"
 date:       2017-05-22 14:37:00 +0800
 author:     "Clean Li"
 categories: tech
+tags: [VBox,"虚拟机"]
 header-img: "img/post-bg-05.jpg"
 ---
 

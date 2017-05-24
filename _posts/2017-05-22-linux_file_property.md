@@ -3,6 +3,7 @@ layout:     post
 title:      "【转载】Linux文件权限"
 date:       2017-05-22 13:37:00 +0800
 categories: tech
+tags: [Linux,"权限"]
 header-img: "img/post-bg-06.jpg"
 ---
 

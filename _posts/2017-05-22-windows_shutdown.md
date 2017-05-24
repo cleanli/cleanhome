@@ -3,6 +3,7 @@ layout:     post
 title:      "【转载】Windows shutdown command"
 date:       2017-05-22 22:47:24 +0800
 categories: tech
+tags: [Windows,"关机"]
 header-img: "img/post-bg-04.jpg"
 ---
 

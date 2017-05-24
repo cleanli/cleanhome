@@ -4,6 +4,7 @@ title:      "自己修改编译ubuntu终端"
 date:       2017-05-22 22:22:06 +0800
 author:     "Clean Li"
 categories: tech
+tags: [Ubuntu,Terminal]
 header-img: "img/post-bg-03.jpg"
 ---
 
