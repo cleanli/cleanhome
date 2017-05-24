@@ -10,7 +10,7 @@ header-img: "img/post-bg-02.jpg"
 
 VirtualBox同时支持自己的虚拟硬盘格式VDI和Vmware的VMDK格式，两种格式的压缩略有不同。
 
-# 1 碎片整理
+### 1 碎片整理
 第一步要做的是碎片整理，打开虚拟机，执行下面的命令：
 
 Linux系统：
@@ -22,7 +22,7 @@ Windows系统需要下载[Sysinternals Suite](http://technet.microsoft.com/en-us
 ```shell
 sdelete –z
 ```
-# 2 压缩磁盘
+### 2 压缩磁盘
 关闭虚拟机，现在可以开始压缩虚拟硬盘了
 
 如果你的虚拟硬盘是VirtualBox自己的VDI格式，找到你的虚拟硬盘文件，执行命令：

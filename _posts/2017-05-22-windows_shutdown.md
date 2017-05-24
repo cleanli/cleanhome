@@ -6,7 +6,7 @@ categories: tech
 header-img: "img/post-bg-04.jpg"
 ---
 
-一些关机命令 shutdown的使用实例：
+#### 一些关机命令 shutdown的使用实例
 
 ---
 ```bat
