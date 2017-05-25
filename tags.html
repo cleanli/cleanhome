@@ -9,13 +9,13 @@ description: "This is what I do."
       {% assign tags_list = site.tags %}
       {% if tags_list.first[0] == null %}
         {% for tag in tags_list %}
-                <a href="{{ site.BASE_PATH }}/{{ site.tags_path }}#{{ tag[0] }}-ref" data-toggle="tab">
+                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] }}-ref" data-toggle="tab">
                   {{ tag | capitalize }} ({{ site.tags[tag].size }})
                </a>|
         {% endfor %}
       {% else %}
         {% for tag in tags_list %}
-                <a href="{{ site.BASE_PATH }}/{{ site.tags_path }}#{{ tag[0] }}-ref" data-toggle="tab">
+                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] }}-ref" data-toggle="tab">
                     {{ tag[0] | capitalize }} ({{ tag[1].size }})
                 </a>|
         {% endfor %}
@@ -34,7 +34,7 @@ description: "This is what I do."
         {% for node in pages_list %}
           {% if node.title != null %}
             {% if group == null or group == node.group %}
-            <li style="line-height: 35px;"><span class="text-muted">{{ node.date | date: "%Y-%m-%d" }} &nbsp;&nbsp;&nbsp; </span><a href="{{ site.BASE_PATH }}{{node.url}}">{{node.title}}</a></li>
+            <li style="line-height: 35px;"><span class="text-muted">{{ node.date | date: "%Y-%m-%d" }} &nbsp;&nbsp;&nbsp; </span><a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a></li>
             {% endif %}
           {% endif %}
         {% endfor %}
