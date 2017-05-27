@@ -10,7 +10,7 @@ description: "This is what I do."
       {% if categories_list.first[0] == null %}
         {% for category in categories_list %}
             <li>
-                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category | replace:' ','-' }}-ref" data-toggle="tab">
+                <a href="#{{ category | replace:' ','-' }}-ref" data-toggle="tab" id="{{ category | replace:' ','-' }}-id">
                   {{ category | capitalize }} <span class="badge pull-right">({{ site.categories[category].size }})</span>
                </a>
             </li>
@@ -18,7 +18,7 @@ description: "This is what I do."
       {% else %}
         {% for category in categories_list %}
             <li>
-                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace:' ','-' }}-ref" data-toggle="tab">
+                <a href="#{{ category[0] | replace:' ','-' }}-ref" data-toggle="tab" id="{{ category[0] | replace:' ','-' }}-id">
                     {{ category[0] | capitalize }} <span class="badge pull-right">({{ category[1].size }})</span>
                 </a>
             </li>
@@ -48,3 +48,13 @@ description: "This is what I do."
 </div>
 
 <div class="clearfix"></div>
+<script>
+function getid()
+{
+    var ih;
+    ih=location.href.split("#")[1];
+    $('#'+ih).tab("show");
+}
+</script>
+<body onload="getid()">
+</body>

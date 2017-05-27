@@ -14,7 +14,10 @@ description: "探索、记录、分享、生活"
         </h3>
         {% endif %}
     </a>
-    <p class="post-meta">发表于{{ post.date | date: "%Y-%m-%d" }}</p>
+    <p class="post-meta">发表于{{ post.date | date: "%Y-%m-%d" }} | 类别：
+    <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ post.categories }}-id">
+    {{ post.categories }}</a>
+    </p>
 </div>
 <hr>
 {% endfor %}

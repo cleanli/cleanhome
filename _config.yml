@@ -19,4 +19,8 @@ permalink: date
 paginate: 48
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
+# path
+categories_path: categories.html
+tags_path: tags.html
+
 gems: [jekyll-paginate, jekyll-feed]
