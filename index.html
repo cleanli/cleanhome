@@ -16,7 +16,22 @@ description: "探索、记录、分享、生活"
     </a>
     <p class="post-meta">发表于{{ post.date | date: "%Y-%m-%d" }} | 类别：
     <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ post.categories }}-id">
-    {{ post.categories }}</a>
+    {{ post.categories }}</a> | 标签：
+      {% assign tags_list = post.tags %}
+      {% if tags_list.first[0] == null %}
+        {% for tag in tags_list %}
+                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag | replace:' ','-' }}-id">
+                  {{ tag | capitalize }}({{ site.tags[tag].size }})</span>
+               </a>  
+        {% endfor %}
+      {% else %}
+        {% for tag in tags_list %}
+                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] | replace:' ','-' }}-id">
+                    {{ tag[0] | capitalize }}({{ tag[1].size }})</span>
+                </a>  
+        {% endfor %}
+      {% endif %}
+      {% assign tags_list = nil %}
     </p>
 </div>
 <hr>

@@ -10,7 +10,7 @@ description: "This is what I do."
       {% if tags_list.first[0] == null %}
         {% for tag in tags_list %}
 	    <li>
-                <a href="#{{ tag[0] }}-ref" data-toggle="tab">
+                <a href="#{{ tag[0] }}-ref" data-toggle="tab" id="{{ tag[0] }}-id">
                   {{ tag | capitalize }} ({{ site.tags[tag].size }})
                </a>
 	    </li>
@@ -18,7 +18,7 @@ description: "This is what I do."
       {% else %}
         {% for tag in tags_list %}
 	    <li>
-                <a href="#{{ tag[0] }}-ref" data-toggle="tab">
+                <a href="#{{ tag[0] }}-ref" data-toggle="tab" id="{{ tag[0] }}-id">
                     {{ tag[0] | capitalize }} ({{ tag[1].size }})
                 </a>
 	    </li>
@@ -49,3 +49,13 @@ description: "This is what I do."
 </div>
 
 <div class="clearfix"></div>
+<script>
+function getid()
+{
+    var ih;
+    ih=location.href.split("#")[1];
+    $('#'+ih).tab("show");
+}
+</script>
+<body onload="getid()">
+</body>
