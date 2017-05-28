@@ -239,11 +239,11 @@ hr.small {
 }
 .post-preview > .post-meta > a {
   text-decoration: none;
-  color: #404040;
+  color: #4040f0;
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
-  color: #0085a1;
+  color: #002531;
   text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
