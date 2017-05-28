@@ -19,13 +19,13 @@ description: "探索、记录、分享、生活"
       {% if categories_list.first[0] == null %}
         {% for category in categories_list %}
                 <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category | replace:' ','-' }}-id">
-                  {{ category | capitalize }}({{ site.categories[category].size }})</span>
+                  {{ category | capitalize }}({{ site.categories[category].size }})
                </a>
         {% endfor %}
       {% else %}
         {% for category in categories_list %}
                 <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace:' ','-' }}-id">
-                    {{ category[0] | capitalize }}({{ category[1].size }})</span>
+                    {{ category[0] | capitalize }}({{ category[1].size }})
                 </a>
         {% endfor %}
       {% endif %}
@@ -36,13 +36,13 @@ description: "探索、记录、分享、生活"
       {% if tags_list.first[0] == null %}
         {% for tag in tags_list %}
                 <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag | replace:' ','-' }}-id">
-                  {{ tag | capitalize }}({{ site.tags[tag].size }})</span>
+                  {{ tag | capitalize }}({{ site.tags[tag].size }})
                </a>  
         {% endfor %}
       {% else %}
         {% for tag in tags_list %}
                 <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] | replace:' ','-' }}-id">
-                    {{ tag[0] | capitalize }}({{ tag[1].size }})</span>
+                    {{ tag[0] | capitalize }}({{ tag[1].size }})
                 </a>  
         {% endfor %}
       {% endif %}

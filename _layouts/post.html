@@ -12,7 +12,41 @@ layout: default
                     {% if page.subtitle %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
-                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+                    <span class="meta pull-right">
+                      发表于{{ page.date | date: "%Y-%m-%d" }} | 类别：
+                      {% assign categories_list = page.categories %}
+                      {% if categories_list.first[0] == null %}
+                        {% for category in categories_list %}
+                                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category | replace:' ','-' }}-id">
+                                  {{ category | capitalize }}({{ site.categories[category].size }})
+                               </a>
+                        {% endfor %}
+                      {% else %}
+                        {% for category in categories_list %}
+                                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace:' ','-' }}-id">
+                                    {{ category[0] | capitalize }}({{ category[1].size }})
+                                </a>
+                        {% endfor %}
+                      {% endif %}
+                      {% assign categories_list = nil %}
+    
+                    | 标签：
+                      {% assign tags_list = page.tags %}
+                      {% if tags_list.first[0] == null %}
+                        {% for tag in tags_list %}
+                                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag | replace:' ','-' }}-id">
+                                  {{ tag | capitalize }}({{ site.tags[tag].size }})
+                               </a>  
+                        {% endfor %}
+                      {% else %}
+                        {% for tag in tags_list %}
+                                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] | replace:' ','-' }}-id">
+                                    {{ tag[0] | capitalize }}({{ tag[1].size }})
+                                </a>  
+                        {% endfor %}
+                      {% endif %}
+                      {% assign tags_list = nil %}
+		    </span>
                 </div>
             </div>
         </div>
