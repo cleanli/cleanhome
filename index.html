@@ -15,8 +15,23 @@ description: "探索、记录、分享、生活"
         {% endif %}
     </a>
     <p class="post-meta">发表于{{ post.date | date: "%Y-%m-%d" }} | 类别：
-    <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ post.categories }}-id">
-    {{ post.categories }}</a> | 标签：
+      {% assign categories_list = post.categories %}
+      {% if categories_list.first[0] == null %}
+        {% for category in categories_list %}
+                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category | replace:' ','-' }}-id">
+                  {{ category | capitalize }}({{ site.categories[category].size }})</span>
+               </a>
+        {% endfor %}
+      {% else %}
+        {% for category in categories_list %}
+                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace:' ','-' }}-id">
+                    {{ category[0] | capitalize }}({{ category[1].size }})</span>
+                </a>
+        {% endfor %}
+      {% endif %}
+      {% assign categories_list = nil %}
+
+    | 标签：
       {% assign tags_list = post.tags %}
       {% if tags_list.first[0] == null %}
         {% for tag in tags_list %}

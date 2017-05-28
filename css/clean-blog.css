@@ -213,12 +213,12 @@ hr.small {
   }
 }
 .post-preview > a {
-  color: #404040;
+  color: #0a3a92;
 }
 .post-preview > a:hover,
 .post-preview > a:focus {
-  text-decoration: none;
-  color: #0085a1;
+  text-decoration: underline;
+  color: #002531;
 }
 .post-preview > a > .post-title {
   font-size: 24px;
@@ -239,7 +239,7 @@ hr.small {
 }
 .post-preview > .post-meta > a {
   text-decoration: none;
-  color: #4040f0;
+  color: #2a7ae2;
 }
 .post-preview > .post-meta > a:hover,
 .post-preview > .post-meta > a:focus {
