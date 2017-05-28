@@ -5,29 +5,33 @@ description: "This is what I do."
 ---
 
 <div class="list-container">
-    <ul class="nav nav-tabs-horizontal">
+    <ul class="nav nav-tabs">
       {% assign tags_list = site.tags %}
       {% if tags_list.first[0] == null %}
         {% for tag in tags_list %}
-                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] }}-ref" data-toggle="tab">
+	    <li>
+                <a href="#{{ tag[0] }}-ref" data-toggle="tab">
                   {{ tag | capitalize }} ({{ site.tags[tag].size }})
-               </a>|
+               </a>
+	    </li>
         {% endfor %}
       {% else %}
         {% for tag in tags_list %}
-                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] }}-ref" data-toggle="tab">
+	    <li>
+                <a href="#{{ tag[0] }}-ref" data-toggle="tab">
                     {{ tag[0] | capitalize }} ({{ tag[1].size }})
-                </a>|
+                </a>
+	    </li>
         {% endfor %}
       {% endif %}
       {% assign tags_list = nil %}
     </ul>
 </div>
-<hr>
+<br>
 <!-- Tab panes -->
 <div class="tab-content list-container">
   {% for tag in site.tags %}
-    <div class="tab-pane" id="{{ tag[0] | replace:' ','-' }}-ref">
+    <div class="tab-pane fade" id="{{ tag[0] | replace:' ','-' }}-ref">
       <h2 style="margin-top: 0px">{{ tag[0] | capitalize }}</h2>
       <ul class="list-unstyled">
         {% assign pages_list = tag[1] %}
