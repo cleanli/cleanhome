@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      "调整virtual box硬盘大小"
+title:      "【记录】调整virtual box硬盘大小"
 date:       2017-05-22 14:37:00 +0800
 author:     "Clean Li"
-categories: tech
-tags: [VBox,"虚拟机"]
+categories: 技术
+tags: ["记录","虚拟机"]
 header-img: "img/post-bg-05.jpg"
 ---
 

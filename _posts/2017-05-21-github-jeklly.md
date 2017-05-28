@@ -4,8 +4,8 @@ title:      "【原创】Github建博客"
 subtitle:   "记录及总结，备忘"
 date:       2017-05-21 10:38:45 +0800
 author:     "Clean Li"
-categories: tech
-tags: [Git,Github,Jeklly]
+categories: 技术
+tags: ["原创",Jeklly]
 header-img: "img/post-bg-01.jpg"
 ---
 Github使用jeklly生成博客，主要步骤是先找一个博客模版，然后把自己的文章添加到`_post`目录，再提交到Github上去，就完成了。

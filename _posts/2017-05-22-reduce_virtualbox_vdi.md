@@ -2,8 +2,8 @@
 layout:     post
 title:      "【转载】如何减小VirtualBox虚拟硬盘文件的大小"
 date:       2017-05-22 21:59:10 +0800
-categories: tech
-tags: [VBox,"虚拟机"]
+categories: 技术
+tags: ["转载","虚拟机"]
 header-img: "img/post-bg-02.jpg"
 ---
 

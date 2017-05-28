@@ -1,10 +1,10 @@
 ---
 layout:     post
-title:      "Ubuntu16.04下设置终端的标题"
+title:      "【收藏】Ubuntu16.04下设置终端的标题"
 date:       2017-05-19 14:06:25 +0800
 author:     "Clean Li"
-categories: tech
-tags: [Ubuntu,Terminal]
+categories: 技术
+tags: ["收藏",Ubuntu]
 header-img: "img/post-bg-03.jpg"
 ---
 

@@ -22,5 +22,6 @@ exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 # path
 categories_path: categories.html
 tags_path: tags.html
+permalink: /:month-:day-:year/:title.html
 
 gems: [jekyll-paginate, jekyll-feed]

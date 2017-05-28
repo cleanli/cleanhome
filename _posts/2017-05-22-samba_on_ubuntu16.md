@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      "Setup Samba server on ubuntu 16.04"
+title:      "【记录】Setup Samba server on ubuntu 16.04"
 date:       2017-05-22 12:32:15 +0800
-categories: tech
-tags: [Ubuntu,Samba]
+categories: 技术
+tags: ["记录",Ubuntu]
 header-img: "img/post-bg-02.jpg"
 ---
 
