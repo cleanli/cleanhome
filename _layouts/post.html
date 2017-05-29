@@ -13,7 +13,7 @@ layout: default
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
                     <span class="meta pull-right">
-                      发表于{{ page.date | date: "%Y-%m-%d" }} | 类别：
+                      发表于{{ page.date | date: "%Y-%m-%d" }} &nbsp;&nbsp; 类别:
                       {% assign categories_list = page.categories %}
                       {% if categories_list.first[0] == null %}
                         {% for category in categories_list %}
@@ -30,7 +30,7 @@ layout: default
                       {% endif %}
                       {% assign categories_list = nil %}
     
-                    | 标签：
+                    &nbsp;&nbsp; 标签:
                       {% assign tags_list = page.tags %}
                       {% if tags_list.first[0] == null %}
                         {% for tag in tags_list %}

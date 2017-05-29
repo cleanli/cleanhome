@@ -14,7 +14,7 @@ description: "探索、记录、分享、生活"
         </h3>
         {% endif %}
     </a>
-    <p class="post-meta">发表于{{ post.date | date: "%Y-%m-%d" }} | 类别：
+    <p class="post-meta">发表于{{ post.date | date: "%Y-%m-%d" }} &nbsp;&nbsp; 类别:
       {% assign categories_list = post.categories %}
       {% if categories_list.first[0] == null %}
         {% for category in categories_list %}
@@ -31,7 +31,7 @@ description: "探索、记录、分享、生活"
       {% endif %}
       {% assign categories_list = nil %}
 
-    | 标签：
+    &nbsp;&nbsp; 标签:
       {% assign tags_list = post.tags %}
       {% if tags_list.first[0] == null %}
         {% for tag in tags_list %}
