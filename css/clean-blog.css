@@ -27,7 +27,7 @@ h6 {
   font-weight: 800;
 }
 a {
-  color: #404040;
+  color: #4040c0;
 }
 a:hover,
 a:focus {
@@ -181,7 +181,7 @@ hr.small {
   }
 }
 .intro-header .post-heading h1 {
-  font-size: 28px;
+  font-size: 26px;
 }
 .intro-header .post-heading .subheading,
 .intro-header .post-heading .meta {
@@ -205,7 +205,7 @@ hr.small {
 }
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
-    font-size: 44px;
+    font-size: 38px;
   }
   .intro-header .post-heading .subheading {
     font-size: 24px;
