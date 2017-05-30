@@ -24,7 +24,7 @@ https://cleanli.github.io/cleanhome/tags#Git-ref
 ```
 于是很自然想把首页的标签链接后面加上`#Git-ref`，结果发现，页面跳过去之后并没有出现预想中的自动展开那个标签的文章列表。于是具体看了标签页面的html源码，发现每个标签的链接多了一个`data-toggle`属性：
 ```html
-<a href="#{ { tag[0] } }-ref" data-toggle="tab">
+{% raw %}<a href="#{{ tag[0] }}-ref" data-toggle="tab">{% endraw %}
 ```
 好，那就也在tags页面链接后面加上`data-toggle="tab"`，结果网页不跳转。没有办法，只好使出绝招：“网络搜索”。但百度上搜来搜去也就一篇文章提到这个，还没有给出解决方案。
 

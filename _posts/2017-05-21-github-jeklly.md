@@ -66,7 +66,7 @@ baseurl: /cleanhome
 - \_includes
 这里面的就是可以重复利用的文件。这个文件可以被其他的文件包含，重复利用。下面就是引用file.ext的格式。
 ```liquid
-{ % include file.ext % }
+{% raw %}{% include file.ext %}{% endraw %}
 ```
 - \_layouts
 这里存放的是不同类型的网页模板文件。
