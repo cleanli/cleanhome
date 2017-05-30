@@ -13,8 +13,19 @@
   white-space: pre;       // forces <code> to respect <pre> formatting
 }
 
-.highlight table td { padding: 5px; }
+.highlight table td { padding: 0px; }
 .highlight table pre { margin: 0; }
+.highlight .table {
+  background-color: transparent;
+  border: 2px solid transparent;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.highlight .table > tbody > tr:hover {
+  background-color: #202020;
+}
 
 /*
  * GitHub style for Pygments syntax highlighter, for use with Jekyll
