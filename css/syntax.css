@@ -16,6 +16,7 @@
 .highlight table td { padding: 0px; }
 .highlight table pre { margin: 0; }
 .highlight .table {
+  width: auto;
   background-color: transparent;
   border: 2px solid transparent;
   margin-bottom: 0px;
