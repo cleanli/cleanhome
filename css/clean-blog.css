@@ -153,7 +153,7 @@ hr.small {
   .intro-header .site-heading,
   .intro-header .post-heading,
   .intro-header .page-heading {
-    padding: 120px 0;
+    padding: 100px 0;
   }
 }
 .intro-header .site-heading,
@@ -177,7 +177,7 @@ hr.small {
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading h1,
   .intro-header .page-heading h1 {
-    font-size: 64px;
+    font-size: 50px;
   }
 }
 .intro-header .post-heading h1 {
