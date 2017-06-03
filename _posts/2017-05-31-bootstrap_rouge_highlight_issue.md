@@ -4,7 +4,7 @@ title:      "【原创】Bootstrap带行号语法高亮的问题"
 date:       2017-05-31 22:46:25 +0800
 author:     "Clean Li"
 categories: 技术
-tags: ["原创",Jeklly]
+tags: ["原创",Jekyll]
 ---
 这几天发现在Bootstrap下面使用带行号的语法高亮时，最后的结果有两点奇怪的地方，一个是最上面有一根线，另外一个就是鼠标经过时外框会反白。
 
