@@ -54,7 +54,7 @@ function getid()
 {
     var ih;
     ih=location.href.split("#")[1];
-    $('#'+ih).tab("show");
+    $('#'+decodeURI(ih)).tab("show");
 }
 </script>
 <body onload="getid()">
