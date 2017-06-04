@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "关 于"
-header-img: "img/about-bg.jpg"
+header-img: "img/post-bg-02.jpg"
 ---
 驱动工程师，人生探索者。
 
