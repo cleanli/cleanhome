@@ -1,11 +1,11 @@
 ---
 layout:     post
-title:      "【记录】Install Chinese Input in Ubuntu 16.04"
+title:      "【记录】Ubuntu 16.04安装中文输入法"
 date:       2017-06-04 23:29:25 +0800
 categories: 技术
 tags: ["记录",Ubuntu]
 ---
-Failed in following steps, can't find Pinyin Input Method in step 9.
+在网上找到这个步骤：
 
 1 在桌面右上角设置图标中找到“System Setting”，双击打开。
 
@@ -21,8 +21,14 @@ Failed in following steps, can't find Pinyin Input Method in step 9.
 ```
 sudo apt-get install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
 ```
-7 启动IBus框架，在终端输入命令：im-switch -s ibus。
+7 启动IBus框架，在终端输入命令：`im-switch -s ibus`。
 
-8 安装拼音引擎，在终端输入命令：sudo apt-get install ibus-pinyin，即可安装拼音。
+注：没有这个命令，但有`im-config`这个命令
 
-9 设置IBus框架，在终端输入命令：ibus-setup，在出现的窗口选择Input Method，之后选择拼音输入法即可。
+8 安装拼音引擎，在终端输入命令：`sudo apt-get install ibus-pinyin`，即可安装拼音。
+
+9 设置IBus框架，在终端输入命令：`ibus-setup`，在出现的窗口选择Input Method，之后选择拼音输入法即可。
+
+注：在这个步骤找不到中文输入法的选项，后来重新启动之后出现了
+
+10 点击桌面右上角输入法图标，选择“Text Entry Settings”，点击左下角的“+”，把“Chinese(Pinyin)”加入，完成

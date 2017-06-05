@@ -170,12 +170,15 @@ $ cd ~
 $ tar xzvf vim.tar.gz
 ```
 
-#### 5 Installing code analysis tools: cscope & ctags
+#### 5 Installing and initilizing others
 ```console
 $ sudo apt-get install cscope
 $ sudo apt-get install ctags
 $ sudo apt-get install meld
 $ sudo apt-get install tree
+$ git config --global user.email "clean_li@yahoo.com"
+$ git config --global user.name "clean_li"
+$ git config --global core.editor vim
 ```
 
 #### 6 Installing Jekyll
