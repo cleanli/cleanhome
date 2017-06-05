@@ -1,0 +1,130 @@
+# clean's bashrc
+alias gd='git diff'
+export PATH=/home/clean/bin:/home/clean/bin/repo:$PATH
+
+up () 
+{ 
+	LIMIT=$1;
+	if [ -z "$LIMIT" ]; then
+		LIMIT=1;
+	fi;
+	P=$PWD;
+	for ((i=1; i <= LIMIT; i++))
+	do
+		P=$P/..;
+	done;
+	cd $P;
+	export MPWD=$P
+}
+
+c  ()
+{
+mkdir -p $HOME/.dhs
+recpwd
+cd $1
+recpwd
+sort $HOME/.dhs/dhsty -o $HOME/.dhs/dhsty
+}
+
+cg ()
+{
+	choosehisdir
+	str=`cat $HOME/.dhs/wantedpath`
+	rm $HOME/.dhs/wantedpath
+	cd $str
+}
+
+bap ()
+{
+	adb remount
+	sorthiscmd
+	push
+	cat $HOME/.dhs/wantedcmd
+	str=`cat $HOME/.dhs/wantedcmd`
+	g=${str#*/system/}
+	f=${g%/system/*}
+	h="adb pull /system/$f && $str"
+	echo
+	echo $h
+	eval $h
+	rm $HOME/.dhs/wantedcmd
+	mr
+	echo "mediaserver restarted!"
+}
+
+ap ()
+{
+	adb remount
+	sorthiscmd
+	push
+	cat $HOME/.dhs/wantedcmd
+	str=`cat $HOME/.dhs/wantedcmd`
+	eval $str
+	rm $HOME/.dhs/wantedcmd
+	mr
+	echo "mediaserver restarted!"
+}
+
+st ()
+{
+        echo
+        if [ -z "$ORIG" ]; then
+                ORIG=$PS1
+        fi
+        TITLE="\[\e]2;$*\a\]"
+        PS1=${ORIG}${TITLE}
+}
+
+al ()
+{
+adb logcat -v threadtime | tee l
+}
+
+fap ()
+{
+echo $1
+f=$1
+g=${f#*/system/}
+h="adb pull /system/$g"
+echo $h
+#eval $h
+j="adb push $OUT/system/$g /system/$g"
+echo $j
+#eval $h
+echo "$h && $j"
+eval "$h && $j"
+echo $j >> $HOME/.dhs/cmdhist
+mr
+echo "mediaserver restarted"
+}
+
+mr ()
+{
+adb shell stop media
+adb shell start media
+adb shell stop cameraserver
+adb shell start cameraserver
+}
+
+savecmd ()
+{
+cp $HOME/.dhs/cmdhist $HOME/.dhs/tmp
+if [ -z "$1" ]; then
+history | grep "adb push\|grep" | cut -c 8- > $HOME/.dhs/tmp2
+sort $HOME/.dhs/tmp2 | uniq
+cat $HOME/.dhs/tmp2 >> $HOME/.dhs/tmp
+rm $HOME/.dhs/tmp2
+else
+echo $1
+echo $1 >> $HOME/.dhs/tmp
+fi
+sort $HOME/.dhs/tmp | uniq > $HOME/.dhs/cmdhist
+rm $HOME/.dhs/tmp
+}
+
+sorthiscmd ()
+{
+cp $HOME/.dhs/cmdhist $HOME/.dhs/tmp
+sort $HOME/.dhs/tmp | uniq > $HOME/.dhs/cmdhist
+rm $HOME/.dhs/tmp
+}

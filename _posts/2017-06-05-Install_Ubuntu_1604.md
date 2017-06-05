@@ -139,6 +139,11 @@ sort $HOME/.dhs/tmp | uniq > $HOME/.dhs/cmdhist
 rm $HOME/.dhs/tmp
 }
 ```
+Or download: [bashrcap]({{ site.baseurl }}/downloads/ubuntu_install/bashrcap), and add to the end of `.bashrc`
+```
+$ cd ~
+$ cat bashrcap >> .bashrc
+```
 
 #### 2 Extract the bin.tar.gz in home directory: [bin.tar.gz]({{ site.baseurl }}/downloads/ubuntu_install/bin.tar.gz)
 ```
@@ -176,6 +181,7 @@ $ sudo apt-get install cscope
 $ sudo apt-get install ctags
 $ sudo apt-get install meld
 $ sudo apt-get install tree
+$ sudo apt-get install gitk
 $ git config --global user.email "clean_li@yahoo.com"
 $ git config --global user.name "clean_li"
 $ git config --global core.editor vim
