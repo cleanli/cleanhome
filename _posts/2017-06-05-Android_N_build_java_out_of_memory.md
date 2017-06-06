@@ -1,11 +1,92 @@
 ---
 layout:     post
-title:      "【记录】Android N build error of Java Out of Memory"
-date:       2017-06-05 06:22:38 +0800
+title:      "【记录】Building Android nougat-x86"
+date:       2017-06-07 00:37:14 +0800
 categories: 技术
 tags: ["记录",Android]
 ---
-Met error:
+## I. Get Source Code
+因为国内无法访问Google官网，在这个地方可以下载Android源码：[清华大学开源软件镜像站AOSP](https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/)
+
+按其提示的方法，为避免直接repo sync太慢，先直接下载[aosp-latest.tar](https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/aosp-latest.tar)，解压得到`.repo`目录，然后再运行：
+```console
+$ repo init -u http://scm.osdn.net/gitroot/android-x86/manifest -b
+```
+此时不能`repo sync`，因为无法从google直接下载code，打开`.repo/manifest.xml`，作如下改动：
+```
+ <manifest>
+ 
+   <remote  name="aosp"
+-           fetch="https://android.googlesource.com/" />
++           fetch="https://aosp.tuna.tsinghua.edu.cn/" />
+   <remote  name="x86"
+            fetch="." />
+   <default revision="refs/tags/android-7.1.2_r11"
+```
+再sync就可以了
+```
+$ repo sync --no-tags --no-clone-bundle -j4
+```
+
+## II. Build
+### Build command
+```console
+$ . build/envsetup.sh 
+including device/generic/x86_64/vendorsetup.sh
+including device/generic/x86/vendorsetup.sh
+including sdk/bash_completion/adb.bash
+
+$ lunch
+
+You're building on Linux
+
+Lunch menu... pick a combo:
+     1. aosp_arm-eng
+     2. aosp_arm64-eng
+     3. aosp_mips-eng
+     4. aosp_mips64-eng
+     5. aosp_x86-eng
+     6. aosp_x86_64-eng
+     7. android_x86_64-eng
+     8. android_x86_64-userdebug
+     9. android_x86_64-user
+     10. android_x86-eng
+     11. android_x86-userdebug
+     12. android_x86-user
+
+Which would you like? [aosp_arm-eng] 10
+
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=7.1.2
+TARGET_PRODUCT=android_x86
+TARGET_BUILD_VARIANT=eng
+TARGET_BUILD_TYPE=release
+TARGET_BUILD_APPS=
+TARGET_ARCH=x86
+TARGET_ARCH_VARIANT=x86
+TARGET_CPU_VARIANT=
+TARGET_2ND_ARCH=
+TARGET_2ND_ARCH_VARIANT=
+TARGET_2ND_CPU_VARIANT=
+HOST_ARCH=x86_64
+HOST_2ND_ARCH=x86
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-4.4.0-31-generic-x86_64-with-Ubuntu-16.04-xenial
+HOST_CROSS_OS=windows
+HOST_CROSS_ARCH=x86
+HOST_CROSS_2ND_ARCH=x86_64
+HOST_BUILD_TYPE=release
+BUILD_ID=NHG47L
+OUT_DIR=out
+============================================
+
+$ make iso_img -j4
+
+```
+
+### Build Error and Solution
+#### Met error: Out of memory error
 ```
 [ 33% 12328/36270] Building with Jack: out/target/common/obj/JAVA_LIBRARIES/core-oj_intermediates/dex-dir/classes.dex
 FAILED: /bin/bash out/target/common/obj/JAVA_LIBRARIES/core-oj_intermediates/dex-dir/classes.dex.rsp
@@ -20,6 +101,8 @@ make: *** [ninja_wrapper] Error 1
 
 #### make failed to build some targets (01:04:39 (hh:mm:ss)) ####
 ```
+
+__Solution:__
 Found solution here:
 [Android N 遇到Try increasing heap size with java option ](http://blog.csdn.net/zxf20063033/article/details/56296403)
 
@@ -29,4 +112,21 @@ clean@M$ ./prebuilts/sdk/tools/jack-admin kill-server
 Killing background server
 clean@M$ ./prebuilts/sdk/tools/jack-admin start-server
 Launching Jack server java -XX:MaxJavaStackTraceDepth=-1 -Djava.io.tmpdir=/tmp -Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4g -cp /home/clean/.jack-server/launcher.jar com.android.jack.launcher.ServerLauncher
+```
+<br>
+#### Met error: No module named mako.template
+```
+FAILED: /bin/bash -c "python external/mesa/src/compiler/glsl/ir_expression_operation.py strings > out/target/product/x86/gen/STATIC_LIBRARIES/libmesa_glsl_intermediates/glsl/ir_expression_operation_strings.h"
+Traceback (most recent call last):
+  File "external/mesa/src/compiler/glsl/ir_expression_operation.py", line 23, in <module>
+    import mako.template
+ImportError: No module named mako.template
+ninja: build stopped: subcommand failed.
+build/core/ninja.mk:148: recipe for target 'ninja_wrapper' failed
+make: *** [ninja_wrapper] Error 1
+```
+
+__Solution:__
+```
+$ sudo apt-get install python-mako
 ```
