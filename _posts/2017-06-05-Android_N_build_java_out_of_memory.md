@@ -130,3 +130,6 @@ __Solution:__
 ```
 $ sudo apt-get install python-mako
 ```
+
+## III. Test
+Testing on Virtual Box, it worked.
