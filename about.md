@@ -3,7 +3,7 @@ layout: page
 title: "关 于"
 header-img: "img/post-bg-02.jpg"
 ---
-驱动工程师，人生探索者。
+黎涛，Clean Li，爱好广泛，人生探索者。
 
 人生真的只有一千来个月吗？
 
