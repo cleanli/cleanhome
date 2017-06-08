@@ -143,9 +143,10 @@ Virtual box可以配置分辨率，vmware还没有很好的办法，因此以Vir
 
 在虚拟机关闭以后进行。
 
-方法一：对应的虚拟机的vbox文件的“<ExtraData>”下新开一行，添加以下内容
+方法一：对应的虚拟机的vbox文件的`ExtraData`下新开一行，添加以下内容
 ```
-< ExtraDataItem name ="CustomVideoMode1" value ="480x800x16" /> < ExtraDataItem name ="CustomVideoMode2" value ="320x480x16" />
+< ExtraDataItem name ="CustomVideoMode1" value ="480x800x16" /> 
+< ExtraDataItem name ="CustomVideoMode2" value ="320x480x16" />
 ```
 
 方法二：执行命令，其中“VM name”替换为你自己的虚拟机的名字
