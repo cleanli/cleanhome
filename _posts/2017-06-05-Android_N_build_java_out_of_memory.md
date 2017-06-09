@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "【记录】编译测试Android nougat-x86"
-date:       2017-06-07 00:37:14 +0800
+date:       2017-06-09 23:17:14 +0800
 categories: 技术
 tags: ["记录",Android]
 ---
