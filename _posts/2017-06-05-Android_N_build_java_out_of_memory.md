@@ -1,11 +1,11 @@
 ---
 layout:     post
-title:      "【记录】Building Android nougat-x86"
+title:      "【记录】编译测试Android nougat-x86"
 date:       2017-06-07 00:37:14 +0800
 categories: 技术
 tags: ["记录",Android]
 ---
-## I. Get Source Code
+## 一、获取源码
 因为国内无法访问Google官网，在这个地方可以下载Android源码：[清华大学开源软件镜像站AOSP](https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/)
 
 按其提示的方法，为避免直接repo sync太慢，先直接下载[aosp-latest.tar](https://mirrors.tuna.tsinghua.edu.cn/aosp-monthly/aosp-latest.tar)，解压得到`.repo`目录，然后再运行：
@@ -28,7 +28,7 @@ $ repo init -u http://scm.osdn.net/gitroot/android-x86/manifest -b
 $ repo sync --no-tags --no-clone-bundle -j4
 ```
 
-## II. Build
+## 二、编译
 ### Build command
 ```console
 $ . build/envsetup.sh 
@@ -86,7 +86,7 @@ $ make iso_img -j4
 ```
 
 ### Build Error and Solution
-#### Met error: Out of memory error
+#### ---- Met error: Out of memory error
 ```
 [ 33% 12328/36270] Building with Jack: out/target/common/obj/JAVA_LIBRARIES/core-oj_intermediates/dex-dir/classes.dex
 FAILED: /bin/bash out/target/common/obj/JAVA_LIBRARIES/core-oj_intermediates/dex-dir/classes.dex.rsp
@@ -114,7 +114,7 @@ clean@M$ ./prebuilts/sdk/tools/jack-admin start-server
 Launching Jack server java -XX:MaxJavaStackTraceDepth=-1 -Djava.io.tmpdir=/tmp -Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4g -cp /home/clean/.jack-server/launcher.jar com.android.jack.launcher.ServerLauncher
 ```
 <br>
-#### Met error: No module named mako.template
+#### ---- Met error: No module named mako.template
 ```
 FAILED: /bin/bash -c "python external/mesa/src/compiler/glsl/ir_expression_operation.py strings > out/target/product/x86/gen/STATIC_LIBRARIES/libmesa_glsl_intermediates/glsl/ir_expression_operation_strings.h"
 Traceback (most recent call last):
@@ -131,5 +131,37 @@ __Solution:__
 $ sudo apt-get install python-mako
 ```
 
-## III. Test
-Testing on Virtual Box, it worked.
+<br>
+#### ---- Met Message: no isohybird
+```
+/bin/bash: isohybrid: command not found
+isohybrid not found.
+Install syslinux 4.0 or higher if you want to build a usb bootable iso.
+
+
+out/target/product/x86/android_x86.iso is built successfully.
+```
+
+__Solution:__
+```
+$ sudo apt-get install syslinux-utils
+```
+
+<br>
+#### ---- Met Error: isolinux.bin missing or corrupt
+Get this error message when test the boot image with USB stick.
+
+__Solution:__
+You may need to use the following command
+```
+sudo dd if=linux.iso of=/dev/sdb
+```
+instead of
+```
+sudo dd if=linux.iso of=/dev/sdb1
+```
+
+## 三、测试
+使用Virtual Box虚拟机测试，可以启动。
+
+使用U盘作启动盘，也可以成功启动。在真实电脑上还可以插入USB摄像头，可以使用camera应用。
