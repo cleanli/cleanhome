@@ -26,3 +26,8 @@ powercfg /h on
 ```
 $ sudo apt-get install virtualbox
 ```
+
+- List apt
+```
+$ sudo apt list
+```
