@@ -6,8 +6,14 @@ categories: 技术
 tags: ["记录",Android,Grub]
 ---
 直接使用Android x86的usb-iso安装的usb移动硬盘启动不了，停留在Grub启动提示信息界面。所以直接安装grub。
+```
+GRUB Loading stage1.5.
 
-安装了Android x86的移动硬盘根目录下有`/android-2017-06-09`和`/grub`目录。
+GRUB Loading, please wait...
+```
+步骤为先格式化移动硬盘，安装好grub，再安装Android（不安装Android x86的grub），然后把配置文件放到/boot/grub下面
+
+安装了Android x86的移动硬盘根目录下有`/android-2017-06-09`和`/grub`(可以从其他地方copy过来)目录。
 
 尝试了两种Grub，一个版本是GNU GRUB 0.97，这个是Legacy版本，使用menu.lst配置。在Ubuntu下安装命令为：
 ```
@@ -28,7 +34,8 @@ $ cd /media/clean/b7971baa-7bb6-4d1d-998f-7e017dc5aa4d/
 $ ls
 android-2017-06-09  boot  grub
 
-$ sudo mv grub boot
+$ sudo cp grub/menu.lst boot/grub
+$ sudo cp grub/android-x86.xpm.gz boot/grub/
 ```
 menu.list类似如下：
 ```
