@@ -11,3 +11,4 @@ code已经上传github，可以通过这个来下载：
 ```
 $ git clone https://github.com/cleanli/android_x86_rotate.git
 ```
+apk下载: [AndroidX86Rotate.apk]({{ site.baseurl }}/downloads/android_x86_rotate/AndroidX86Rotate.apk)
