@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "【记录】调整ext4分区大小
+title:      "【记录】调整ext4分区大小"
 date:       2017-06-26 23:34:06 +0800
 categories: 技术
 tags: ["记录",Ubuntu]
