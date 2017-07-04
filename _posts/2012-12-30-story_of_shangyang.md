@@ -1,9 +1,9 @@
 ---
 layout:     post
 title:      "【原创】商鞅的故事"
-sub-title:  "《史记》笔记之一"
+subtitle:  "《史记》笔记之一"
 date:       2012-12-30 00:00:00 +0800
-categories: 人生
+categories: 感悟
 tags: ["原创","史记"]
 ---
 
