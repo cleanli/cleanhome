@@ -74,3 +74,14 @@ dpkg -i file.deb
 ```
 sed -i "s/ABCD/wxyz/g" $(find ./ -name "config")
 ```
+
+- addr2line
+```
+$ arm-eabi-addr2line -e libcamera.so 00007ba5
+/home/aa/Project/***/vendor/***/***.c:1460
+```
+
+- objdump
+```
+arm-eabi-objdump -d -S libcamera.so > /tmp/asm
+```
