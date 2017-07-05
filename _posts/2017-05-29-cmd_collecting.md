@@ -64,3 +64,13 @@ zip -FF Log_0.51.999.1_LC4ABYA00177_Day1_SST82248.zip --out fix.zip
 ```
 git reset a4e215234aa4927c85693dca7b68e9976948a35e MainActivity.java
 ```
+
+- 安装deb
+```
+dpkg -i file.deb
+```
+
+- 批量查找替换文本
+```
+sed -i "s/ABCD/wxyz/g" $(find ./ -name "config")
+```
