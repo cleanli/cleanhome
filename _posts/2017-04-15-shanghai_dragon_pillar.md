@@ -2,7 +2,7 @@
 layout: post
 title: 【原创】上海延安路高架龙柱事件转载及分析
 date:   2017-04-15 13:15:26 +0800
-categories: miracle
+categories: 探索
 tags: ["转载","奇迹"]
 ---
 在上海流传了一件不可思议的上海延安路高架龙柱事件，先上图。

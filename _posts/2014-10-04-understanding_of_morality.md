@@ -2,7 +2,7 @@
 layout: post
 title: 【原创】关于传统道德的一点理解
 date:   2014-10-04 00:00:00 +0800
-categories: thinking
+categories: 思考
 tags: ["原创"]
 ---
 　　现在的人很不重视传统道德，讲一下我的理解。

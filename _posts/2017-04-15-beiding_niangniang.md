@@ -2,7 +2,7 @@
 layout: post
 title: 【转载】史上最牛钉子户——水立方让位北顶娘娘庙
 date:   2017-04-15 21:28:44 +0800
-categories: miracle
+categories: 探索
 tags: ["转载","奇迹"]
 ---
 ![pic]({{ site.baseurl }}/images/beiding_nn/beiding_nn0.jpg)<br>

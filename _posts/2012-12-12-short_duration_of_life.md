@@ -2,7 +2,7 @@
 layout: post
 title: 【原创】生命的短暂
 date:   2012-12-12 20:36:24 +0800
-categories: thinking
+categories: 思考
 tags: ["原创"]
 ---
 　　取这个题目，是因为看到同事分享的同名的照片，深有感想，于是记下自己的想法，其实内容可能不一定切题。
