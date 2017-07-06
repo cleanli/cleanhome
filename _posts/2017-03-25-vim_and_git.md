@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "【收藏】vim and git笔记"
 date: 2017-03-25 00:00:00 +0800
 categories: tech

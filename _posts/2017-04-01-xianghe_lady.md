@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 【转载】香河老人数十年肉身不腐
 categories: miracle
 tags: ["转载","奇迹"]

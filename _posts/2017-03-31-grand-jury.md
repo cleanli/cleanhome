@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: 【转载】公民审判：美国的陪审团制度
 categories: his_cul
 tags: ["转载","法律"]
