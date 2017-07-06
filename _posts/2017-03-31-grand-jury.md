@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 【转载】公民审判：美国的陪审团制度
-categories: his_cul
+categories: 其它
 tags: ["转载","法律"]
 ---
 # 【转载】公民审判：美国的陪审团制度 #

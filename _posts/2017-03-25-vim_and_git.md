@@ -2,8 +2,8 @@
 layout: post
 title: "【收藏】vim and git笔记"
 date: 2017-03-25 00:00:00 +0800
-categories: tech
-tags: ["收藏",Vim,git]
+categories: 技术
+tags: ["收藏",Vim,Git]
 ---
 # vim and git#
 

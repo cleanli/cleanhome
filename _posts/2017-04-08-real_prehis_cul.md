@@ -3,7 +3,7 @@ layout: post
 title: 【转载】真实存在的史前文明
 date: 2017-04-08 00:15:25 +0800
 categories: 探索
-tags: ["转载","史前文化"]
+tags: ["转载","史前文明"]
 ---
 
 转自UFO探索网，原标题：[史前文明：一个真实存在的文明](http://www.ssufo.com/html/tsfx/528.html)

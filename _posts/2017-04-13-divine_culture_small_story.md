@@ -2,7 +2,7 @@
 layout: post
 title: 【转载】神传文化小故事
 date: 2017-04-13 23:04:18 +0800
-categories: his_cul
+categories: 其它
 tags: ["转载","文化"]
 ---
 ## 厚道待人，才能长久
