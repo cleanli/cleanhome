@@ -3,6 +3,7 @@ layout: post
 title: 【转载】三大证据相继破灭：进化论，一个错误的信仰？
 date:   2017-04-15 09:42:43 +0800
 categories: thinking
+tags: ["转载","进化论"]
 ---
 转自：铁血网，[三大证据相继破灭：进化论，一个错误的信仰? (转)](http://bbs.tiexue.net/post_2850482_1.html)
 

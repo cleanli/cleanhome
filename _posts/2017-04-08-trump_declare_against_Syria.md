@@ -3,6 +3,7 @@ layout: post
 title: 【转载】川普打击叙利亚化学武器的声明（中英）
 date:   2017-04-08 13:50:25 +0800
 categories: his_cul
+tags: ["转载","英语"]
 ---
 美国同胞们：  
 My fellow Americans,

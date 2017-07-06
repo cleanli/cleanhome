@@ -2,6 +2,7 @@
 layout: default
 title: 【转载】值得无神论者深深思考的十个问题 
 categories: thinking
+tags: ["转载"]
 ---
 # 【转载】值得无神论者深深思考的十个问题 #
 

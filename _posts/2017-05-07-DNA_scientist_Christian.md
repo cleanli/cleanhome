@@ -3,6 +3,7 @@ layout: post
 title: 【转载】无神论顶尖DNA科学家成为基督徒
 date:   2017-05-07 21:51:36 +0800
 categories: thinking
+tags: ["转载","信仰"]
 ---
 转自：[无神论顶尖DNA科学家成为基督徒│相信上帝才是最合理的选择](http://mp.weixin.qq.com/s/iSahbmaMTKRtR_h8MYki6A)
 

@@ -2,6 +2,7 @@
 layout: default
 title: 【转载】为何众多宇航员走上了信神的道路?
 categories: thinking
+tags: ["转载"]
 ---
 # 【转载】为何众多宇航员走上了信神的道路? #
 

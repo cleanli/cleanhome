@@ -3,6 +3,7 @@ layout: post
 title: 【原创】神话的矛盾
 date:   2017-05-13 15:46:45 +0800
 categories: thinking
+tags: ["原创"]
 ---
 
 ![pic]({{ site.baseurl }}/images/multi_myth.jpg)<br>

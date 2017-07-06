@@ -2,6 +2,7 @@
 layout: default
 title: 【转载】千年之约 一个古老的传说 正在兑现中
 categories: his_cul
+tags: ["转载","传说"]
 ---
 # 【转载】千年之约 一个古老的传说 正在兑现中 #
 

@@ -3,6 +3,7 @@ layout: post
 title: 【原创】关于神与灵魂的几个问题
 date:   2017-05-18 23:29:35 +0800
 categories: thinking
+tags: ["原创"]
 ---
 
 在网上看到几个问题，把自己目前的理解和答案记录在此。
