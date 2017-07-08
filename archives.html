@@ -1,0 +1,20 @@
+---
+layout: page
+title: "归档"
+---
+<ul>
+  {% assign precount = 0 %}
+  {% assign lyear = 0 %}
+  {% for post in site.posts %}
+      {% capture precount %} {% increment precount %} {% endcapture %}
+      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+      {% if year != lyear %}
+        <a id="{{ year }}"></a>
+	<h3>{{ year }}</h3>
+        {% assign precount = 0 %}
+      {% endif %}
+      <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
+      {% capture lyear %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% endfor %}
+</ul>
