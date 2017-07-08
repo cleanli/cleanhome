@@ -8,14 +8,21 @@
 			{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
 			{% if year != lyear %}
 			  {% if lyear != 0 %}
-			  ({{precount}})<br>
+			  <sup>({{precount}})</sup><br>
 			  {% endif %}
-			  <a href="{{ site.baseurl }}/{{ site.archives_path }}#{{ year }}">{{ year }}</a>
+			  <a href="{{ site.baseurl }}/{{ site.archives_path }}#{{ year }}" onclick="showid('{{ year }}')">{{ year }}</a>
 			  {% assign precount = 0 %}
 			{% endif %}
 			{% capture lyear %}{{ post.date | date: '%Y' }}{% endcapture %}
 			{% endfor %}
 			{% capture precount %} {{ 1 | plus: precount }} {% endcapture %}
-			({{precount}})<br>
+			<sup>({{precount}})</sup><br>
 		</ul>
 </div>
+<script>
+function showid(input)
+{
+    $('#'+input+'-id').tab("show");
+}
+</script>
+

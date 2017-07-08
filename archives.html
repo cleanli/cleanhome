@@ -2,7 +2,8 @@
 layout: page
 title: "归档"
 ---
-<ul>
+<div class="list-container">
+  <ul class="nav nav-tabs">
   {% assign precount = 0 %}
   {% assign lyear = 0 %}
   {% for post in site.posts %}
@@ -14,16 +15,62 @@ title: "归档"
         document.getElementById("{{lyear}}-txt").innerHTML="({{precount}})";
       </script>
       {% endif %}
-        <a id="{{ year }}"></a>
-	<h3>{{ year }}<sup id="{{year}}-txt">TBD</sup></h3>
+	    <li>
+                <a href="#{{ year }}-ref" data-toggle="tab" id="{{ year }}-id">
+                  {{ year }}<sup id="{{year}}-txt">TBD</sup>
+               </a>
+	    </li>
         {% assign precount = 0 %}
       {% endif %}
-      <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
       {% capture lyear %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% endfor %}
   {% capture precount %} {{ 1 | plus: precount }} {% endcapture %}
   <script>
     document.getElementById("{{lyear}}-txt").innerHTML="({{precount}})";
   </script>
-</ul>
+  </ul>
+</div>
+<br>
+<!-- Tab panes -->
+<div class="tab-content list-container">
+  {% assign precount = 0 %}
+  {% assign lyear = 0 %}
+  {% for post in site.posts %}
+      {% capture precount %} {{ 1 | plus: precount }} {% endcapture %}
+      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+      {% if year != lyear %}
+        {% if lyear != 0 %}
+        </ul>
+        </div>
+        <script>
+        document.getElementById("{{lyear}}-txt2").innerHTML="({{precount}})";
+        </script>
+        {% endif %}
+        <div class="tab-pane fade" id="{{ year }}-ref">
+        <a id="{{ year }}"></a>
+        <h2 style="margin-top: 0px">{{ year }}<sup id="{{year}}-txt2">TBD</sup></h2>
+        <ul class="list-unstyled">
+        {% assign precount = 0 %}
+      {% endif %}
+      <li style="line-height: 35px;"><span class="text-muted">{{ post.date | date: "%Y-%m-%d" }} </span><a href="{{ site.baseurl }}{{post.url}}">{{post.title}}</a></li>
+      {% capture lyear %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% endfor %}
+  {% capture precount %} {{ 1 | plus: precount }} {% endcapture %}
+  </ul>
+  </div>
+  <script>
+  document.getElementById("{{lyear}}-txt2").innerHTML="({{precount}})";
+  </script>
+</div>
+
+<div class="clearfix"></div>
+<script>
+function getid()
+{
+    var ih;
+    ih=location.href.split("#")[1];
+    $('#'+decodeURI(ih)+'-id').tab("show");
+}
+</script>
+<body onload="getid()">
+</body>
