@@ -23,4 +23,11 @@ categories_path: categories.html
 tags_path: tags.html
 permalink: /posts/:month-:day-:year/:title.html
 
-gems: [jekyll-paginate, jekyll-feed]
+jekyll-archives:
+  enabled:
+    - year
+  layout: 'year_arch'
+  permalinks:
+    year: '/archives/year/:year.html'
+
+gems: [jekyll-paginate, jekyll-feed, jekyll-archives]

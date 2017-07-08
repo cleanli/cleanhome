@@ -1,0 +1,11 @@
+---
+layout: page
+---
+
+<h1>{{ page.date | date: "%Y" }}</h1>
+
+<ul class="posts">
+{% for post in page.posts %}
+  <li style="line-height: 35px;"><span class="text-muted">{{ post.date | date: "%Y-%m-%d" }} </span><a href="{{ site.baseurl }}{{node.url}}">{{post.title}}</a></li>
+{% endfor %}
+</ul>
