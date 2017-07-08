@@ -4,7 +4,7 @@
 		<ul>
 		{% for item in site.categories %}
 		  {% if item[1] | size != 0 %}
-			<a href="{{ site.baseurl }}/categories/#{{ item[0] }}" title="{{ item[0] }}" onclick="showid('{{ item[0] }}')">{{ item[0] }}({{ item[1] | size }})</a><br>
+		  <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ item[0] }}" title="{{ item[0] }}" onclick="showid('{{ item[0] }}')">{{ item[0] }}({{ item[1] | size }})</a><br>
 		  {% endif %}
 		{% endfor %}
 		</ul>
