@@ -15,6 +15,7 @@
 			{% endif %}
 			{% capture lyear %}{{ post.date | date: '%Y' }}{% endcapture %}
 			{% endfor %}
-			( {{precount | plus: 1}} )<br>
+			{% capture precount %} {{ 1 | plus: precount }} {% endcapture %}
+			({{precount}})<br>
 		</ul>
 </div>

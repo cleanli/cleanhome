@@ -6,15 +6,24 @@ title: "归档"
   {% assign precount = 0 %}
   {% assign lyear = 0 %}
   {% for post in site.posts %}
-      {% capture precount %} {% increment precount %} {% endcapture %}
+      {% capture precount %} {{ 1 | plus: precount }} {% endcapture %}
       {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
       {% if year != lyear %}
+      {% if lyear != 0 %}
+      <script>
+        document.getElementById("{{lyear}}-txt").innerHTML="({{precount}})";
+      </script>
+      {% endif %}
         <a id="{{ year }}"></a>
-	<h3>{{ year }}</h3>
+	<h3>{{ year }}<sup id="{{year}}-txt">TBD</sup></h3>
         {% assign precount = 0 %}
       {% endif %}
       <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
       {% capture lyear %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% endfor %}
+  {% capture precount %} {{ 1 | plus: precount }} {% endcapture %}
+  <script>
+    document.getElementById("{{lyear}}-txt").innerHTML="({{precount}})";
+  </script>
 </ul>
