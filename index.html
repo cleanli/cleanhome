@@ -18,13 +18,13 @@ description: "黎涛的博客"
       {% assign categories_list = post.categories %}
       {% if categories_list.first[0] == null %}
         {% for category in categories_list %}
-                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category | replace:' ','-' }}-id">
+                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category | replace:' ','-' }}">
                   {{ category | capitalize }}({{ site.categories[category].size }})
                </a>
         {% endfor %}
       {% else %}
         {% for category in categories_list %}
-                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace:' ','-' }}-id">
+                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace:' ','-' }}">
                     {{ category[0] | capitalize }}({{ category[1].size }})
                 </a>
         {% endfor %}
@@ -35,13 +35,13 @@ description: "黎涛的博客"
       {% assign tags_list = post.tags %}
       {% if tags_list.first[0] == null %}
         {% for tag in tags_list %}
-                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag | replace:' ','-' }}-id">
+                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag | replace:' ','-' }}">
                   {{ tag | capitalize }}({{ site.tags[tag].size }})
                </a>  
         {% endfor %}
       {% else %}
         {% for tag in tags_list %}
-                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] | replace:' ','-' }}-id">
+                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] | replace:' ','-' }}">
                     {{ tag[0] | capitalize }}({{ tag[1].size }})
                 </a>  
         {% endfor %}

@@ -17,13 +17,13 @@ layout: default
                       {% assign categories_list = page.categories %}
                       {% if categories_list.first[0] == null %}
                         {% for category in categories_list %}
-                                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category | replace:' ','-' }}-id">
+                                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category | replace:' ','-' }}">
                                   {{ category | capitalize }}({{ site.categories[category].size }})
                                </a>
                         {% endfor %}
                       {% else %}
                         {% for category in categories_list %}
-                                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace:' ','-' }}-id">
+                                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace:' ','-' }}">
                                     {{ category[0] | capitalize }}({{ category[1].size }})
                                 </a>
                         {% endfor %}
@@ -34,13 +34,13 @@ layout: default
                       {% assign tags_list = page.tags %}
                       {% if tags_list.first[0] == null %}
                         {% for tag in tags_list %}
-                                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag | replace:' ','-' }}-id">
+                                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag | replace:' ','-' }}">
                                   {{ tag | capitalize }}({{ site.tags[tag].size }})
                                </a>  
                         {% endfor %}
                       {% else %}
                         {% for tag in tags_list %}
-                                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] | replace:' ','-' }}-id">
+                                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] | replace:' ','-' }}">
                                     {{ tag[0] | capitalize }}({{ tag[1].size }})
                                 </a>  
                         {% endfor %}
@@ -53,9 +53,10 @@ layout: default
     </div>
 </header>
 
+<section class="container" style="width: 102%" id="about">
 <!-- Post Content -->
 <article>
-    <div class="container">
+    <div class="container" id="main">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
@@ -79,6 +80,14 @@ layout: default
             </div>
         </div>
     </div>
+    <div id="asidepart">
+        <aside class="clearfix">
+            {% for widget in site.widgets %}
+            {% include _widget/{{widget}}.html %}
+            {% endfor %}
+        </aside>
+    </div>
 </article>
 
+</section>
 <hr>

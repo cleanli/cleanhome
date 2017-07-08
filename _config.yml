@@ -15,13 +15,20 @@ github_username:  cleanli
 # Build settings
 markdown: kramdown
 highlighter: rouge
-paginate: 48
+paginate: 12
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 # path
 categories_path: categories.html
 tags_path: tags.html
 permalink: /posts/:month-:day-:year/:title.html
+
+
+#### Widgets
+widgets:
+- category
+- tag
+## provide seven widgets:category,tag,rss,archive,tagcloud,links,weibo,douban
 
 jekyll-archives:
   enabled:
