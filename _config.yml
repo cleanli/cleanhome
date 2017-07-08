@@ -28,6 +28,7 @@ permalink: /posts/:month-:day-:year/:title.html
 widgets:
 - category
 - tag
+- archive
 ## provide seven widgets:category,tag,rss,archive,tagcloud,links,weibo,douban
 
 jekyll-archives:
