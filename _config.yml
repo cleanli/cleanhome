@@ -31,11 +31,4 @@ widgets:
 - archive
 ## provide seven widgets:category,tag,rss,archive,tagcloud,links,weibo,douban
 
-jekyll-archives:
-  enabled:
-    - year
-  layout: 'year_arch'
-  permalinks:
-    year: '/archives/year/:year.html'
-
-gems: [jekyll-paginate, jekyll-feed, jekyll-archives]
+gems: [jekyll-paginate, jekyll-feed]
