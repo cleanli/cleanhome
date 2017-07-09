@@ -9,6 +9,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 100%;
 }
 
+.linkslist ul {
+    list-style: none
+}
+
 /* custom Font*/
 @font-face {
     font-family: "covered_by_your_graceregular";

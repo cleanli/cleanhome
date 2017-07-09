@@ -24,12 +24,17 @@ tags_path: tags.html
 archives_path: archives.html
 permalink: /posts/:month-:day-:year/:title.html
 
+links:
+  Clean的收藏: https://longhistory.github.io/clean_collecting/index.html
+  Jekyll中文: http://jekyllrb.com
+  Liquid中文文档: https://liquid.bootcss.com
 
 #### Widgets
 widgets:
 - category
 - tag
 - archive
+- links
 ## provide seven widgets:category,tag,rss,archive,tagcloud,links,weibo,douban
 
 gems: [jekyll-paginate, jekyll-feed]
