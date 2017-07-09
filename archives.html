@@ -7,7 +7,7 @@ title: "归档"
   <ul class="nav nav-tabs">
 	  {% for member in yearsgroup %}
 	  {% assign tmpv = member | split: "-" %}
-	  <li><a href="#{{ tmpv[0] }}-ref" data-toggle="tab" id="{{ tmpv[0] }}-id"> {{ tmpv[0] }}<sup id="{{tmpv[0]}}-txt">{{tmpv[1]}}</sup></a></li>
+	  <li><a href="#{{ tmpv[0] }}-ref" data-toggle="tab" id="{{ tmpv[0] }}-id"> {{ tmpv[0] }}<br><sup>({{tmpv[1]}})</sup></a></li>
 	  {% endfor %}
   </ul>
 </div>
@@ -18,7 +18,7 @@ title: "归档"
   {% assign lyear = 0 %}
   {% for post in site.posts %}
       {% capture precount %} {{ 1 | plus: precount }} {% endcapture %}
-      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+      {% capture year %}{{ post.date | date: '%Y%m' }}{% endcapture %}
       {% if year != lyear %}
         {% if lyear != 0 %}
         </ul>
@@ -34,7 +34,7 @@ title: "归档"
         {% assign precount = 0 %}
       {% endif %}
       <li style="line-height: 35px;"><span class="text-muted">{{ post.date | date: "%Y-%m-%d" }} </span><a href="{{ site.baseurl }}{{post.url}}">{{post.title}}</a></li>
-      {% capture lyear %}{{ post.date | date: '%Y' }}{% endcapture %}
+      {% capture lyear %}{{ post.date | date: '%Y%m' }}{% endcapture %}
   {% endfor %}
   {% capture precount %} {{ 1 | plus: precount }} {% endcapture %}
   </ul>
