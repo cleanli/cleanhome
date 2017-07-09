@@ -1,27 +1,4 @@
-{% assign yearstr = "" %}
-{% assign precount = 0 %}
-{% assign lyear = 0 %}
-{% for post in site.posts %}
-  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% if year != lyear %}
-    {% if lyear != 0 %}
-       {% capture yearstr %}{{ yearstr | append: '-' }}{% endcapture %}
-       {% capture tmpstr %}{{ precount }}{% endcapture %}
-       {% capture tmpstr %}{{ tmpstr | lstrip | rstrip}}{% endcapture %}
-       {% capture yearstr %}{{ yearstr | append: tmpstr }}{% endcapture %}
-       {% capture yearstr %}{{ yearstr | append: ',' }}{% endcapture %}
-    {% endif %}
-    {% capture yearstr %}{{ yearstr | append: year }}{% endcapture %}
-    {% assign precount = 0 %}
-  {% endif %}
-  {% capture lyear %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% capture precount %} {{ 1 | plus: precount }} {% endcapture %}
-{% endfor %}
-{% capture yearstr %}{{ yearstr | append: '-' }}{% endcapture %}
-{% capture tmpstr %}{{ precount }}{% endcapture %}
-{% capture tmpstr %}{{ tmpstr | lstrip | rstrip}}{% endcapture %}
-{% capture yearstr %}{{ yearstr | append: tmpstr }}{% endcapture %}
-{% assign yearsgroup = yearstr | split: "," %}
+{% include _widget/archives.ext %}
 <div class="archiveslist">
 	<p class="asidetitle">归档</p>
 		<ul>
