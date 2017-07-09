@@ -55,7 +55,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 @media only screen and (min-width: 1024px) {
     #main {
-        margin: 2em 0 0;
+        margin: 0 0 0;
         width: 75%;
         float: left;
         -webkit-transition: margin 0.5s ease-out;
@@ -464,7 +464,7 @@ section.comment {
         position: relative;
         float: left;
         width: 18%;
-        margin: 2em 0 0 3%
+        margin: 0 0 0 3%
     }
 }
 
