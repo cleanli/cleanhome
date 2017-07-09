@@ -2,32 +2,36 @@
 layout: page
 title: "归档"
 ---
+{% assign yearstr = "" %}
+{% assign precount = 0 %}
+{% assign lyear = 0 %}
+{% for post in site.posts %}
+  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% if year != lyear %}
+    {% if lyear != 0 %}
+       {% capture yearstr %}{{ yearstr | append: '-' }}{% endcapture %}
+       {% capture tmpstr %}{{ precount }}{% endcapture %}
+       {% capture tmpstr %}{{ tmpstr | lstrip | rstrip}}{% endcapture %}
+       {% capture yearstr %}{{ yearstr | append: tmpstr }}{% endcapture %}
+       {% capture yearstr %}{{ yearstr | append: ',' }}{% endcapture %}
+    {% endif %}
+    {% capture yearstr %}{{ yearstr | append: year }}{% endcapture %}
+    {% assign precount = 0 %}
+  {% endif %}
+  {% capture lyear %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% capture precount %} {{ 1 | plus: precount }} {% endcapture %}
+{% endfor %}
+{% capture yearstr %}{{ yearstr | append: '-' }}{% endcapture %}
+{% capture tmpstr %}{{ precount }}{% endcapture %}
+{% capture tmpstr %}{{ tmpstr | lstrip | rstrip}}{% endcapture %}
+{% capture yearstr %}{{ yearstr | append: tmpstr }}{% endcapture %}
+{% assign yearsgroup = yearstr | split: "," %}
 <div class="list-container">
   <ul class="nav nav-tabs">
-  {% assign precount = 0 %}
-  {% assign lyear = 0 %}
-  {% for post in site.posts %}
-      {% capture precount %} {{ 1 | plus: precount }} {% endcapture %}
-      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-      {% if year != lyear %}
-      {% if lyear != 0 %}
-      <script>
-        document.getElementById("{{lyear}}-txt").innerHTML="({{precount}})";
-      </script>
-      {% endif %}
-	    <li>
-                <a href="#{{ year }}-ref" data-toggle="tab" id="{{ year }}-id">
-                  {{ year }}<sup id="{{year}}-txt">TBD</sup>
-               </a>
-	    </li>
-        {% assign precount = 0 %}
-      {% endif %}
-      {% capture lyear %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% endfor %}
-  {% capture precount %} {{ 1 | plus: precount }} {% endcapture %}
-  <script>
-    document.getElementById("{{lyear}}-txt").innerHTML="({{precount}})";
-  </script>
+	  {% for member in yearsgroup %}
+	  {% assign tmpv = member | split: "-" %}
+	  <li><a href="#{{ tmpv[0] }}-ref" data-toggle="tab" id="{{ tmpv[0] }}-id"> {{ tmpv[0] }}<sup id="{{tmpv[0]}}-txt">{{tmpv[1]}}</sup></a></li>
+	  {% endfor %}
   </ul>
 </div>
 <br>
