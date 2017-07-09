@@ -49,7 +49,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 #main {
-    margin: 1em 0 0;
+    margin: 0 0 0;
     line-height: 1.8;
 }
 
@@ -464,7 +464,7 @@ section.comment {
         position: relative;
         float: left;
         width: 18%;
-        margin: 0 0 0 3%
+        margin: 1em 0 0 3%
     }
 }
 
