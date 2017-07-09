@@ -691,7 +691,7 @@ section.comment {
 }
 
 .linkslist {
-    margin-top: .5em;
+    margin-top: .2em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -711,11 +711,11 @@ section.comment {
 }
 
 .linkslist ul {
-    padding: .5em 0;
+    padding: .1em 0 0;
 }
 
 .linkslist ul a {
-    font-size: 1em;
+    font-size: 14px;
     line-height: 1.5;
     display: block;
     padding: 0 3%;
