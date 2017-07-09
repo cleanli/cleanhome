@@ -4,7 +4,7 @@ title:      "【收藏】一些命令收集（持续更新）"
 date:       2017-05-29 21:21:46 +0800
 author:     "Clean Li"
 categories: 技术
-tags: ["收藏",Jekyll,Windows,Ubuntu,"虚拟机"]
+tags: ["收藏",Jekyll,Windows,Ubuntu,"虚拟机",Vim]
 header-img: "img/post-bg-01.jpg"
 ---
 - 生成rouge语法高亮配色文件
@@ -85,3 +85,8 @@ $ arm-eabi-addr2line -e libcamera.so 00007ba5
 ```
 arm-eabi-objdump -d -S libcamera.so > /tmp/asm
 ```
+- vim查找关键字并删除所有包含关键字的行
+```
+:g/keyword/d
+```
+
