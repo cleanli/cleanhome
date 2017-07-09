@@ -3,21 +3,33 @@ layout: page
 title: "关 于"
 header-img: "img/post-bg-02.jpg"
 ---
-黎涛，Clean Li，爱好广泛，更是人生探索者。因此把探索与思考的文章集中在另一个网址：
+人生真的只有三万天的时间吗？
 
-[Clean的收藏](https://longhistory.github.io/clean_collecting/index.html)
+为什么首先问这个问题？小时候做题，常常因为没有看清题目的限定条件，做了半天白白忙活，最后还是错。
 
-人生真的只有一千来个月吗？
+所以联想到，人生也是一道题。每个人一生所为、所追求，其实也是在解题。那人生到底有多长时间，是不是真的只有三万天，就是人生这道题的限定条件了，直接影响能否正确解答人生这道题。
 
-<div align="left">
+黎涛，Clean Li，爱好广泛，更是人生探索者，因此把探索与思考的文章集中在另一个博客：<br>
+[Clean的收藏](https://longhistory.github.io/clean_collecting/index.html)<br>
+这里则尽量收录自己的全部文章，除了探索与思考，还有自己技术上的学习，生活与爱好等等。
 
+---
+把文章分了六大类别：<br>
+
+**思考**：主要是对人生与世界的探索中的思考<br>
+**感悟**：生活中的浅层的感想和想法<br>
+**生活**：生活中的一些记录与收藏<br>
+**探索**：一些对探索人生与宇宙奥秘有关的资料的收集<br>
+**技术**：顾名思义<br>
+**其他**：归不进以上类别的<br>
+
+---
+这首李白的诗，道出了世上万事变化无常。常想，如果很多东西都不能长久，那是否存在更长久、更值得追求的东西呢？
+
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;古风其九<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;李白<br>
 庄周梦胡蝶，胡蝶为庄周。<br>
-
 一体更变易，万事良悠悠。<br>
-
 乃知蓬莱水，复作清浅流。<br>
-
 青门种瓜人，旧日东陵侯。<br>
-
 富贵固如此，营营何所求。<br>
-</div>
