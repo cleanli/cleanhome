@@ -4,7 +4,7 @@
 		<ul class="clearfix">
 		{% for item in site.tags %}
 			{% if item[1] | size != 0 %}
-			<a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ item[0] }}" title="{{ item[0] }}" onclick="showid('{{ item[0] }}')"><span class="badge">{{ item[0] }}<sup>{{ item[1] | size }}</sup></span></a>
+			<a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ item[0] }}" title="{{ item[0] }}" onclick="showid('{{ item[0] }}')"><span class="badge">{{ item[0] }}({{ item[1] | size }})</span></a>
 			{% endif %}
 		{% endfor %}
 		</ul>
