@@ -4,7 +4,7 @@ title: 【转载】千古预言《梅花诗》
 date:   2017-04-22 11:21:05 +0800
 categories: 探索
 tags: ["转载","奇迹","预言"]
-header-img: "img/post-bg-03.jpg"
+header-img: "img/post-bg-01.jpg"
 ---
 人们常说的：“一年之际在于春，一天之际在于晨，一生之际在于勤”出自于宋人邵雍。
 

@@ -5,7 +5,7 @@ date:       2017-05-22 22:22:06 +0800
 author:     "Clean Li"
 categories: 技术
 tags: ["收藏",Ubuntu]
-header-img: "img/post-bg-03.jpg"
+header-img: "img/post-bg-01.jpg"
 ---
 
 从一个论坛看到修改编译ubuntu终端的方法，收藏一下。

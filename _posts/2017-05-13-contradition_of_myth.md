@@ -4,7 +4,7 @@ title: 【原创】神话的矛盾
 date:   2017-05-13 15:46:45 +0800
 categories: 思考
 tags: ["原创","信仰"]
-header-img: "img/post-bg-03.jpg"
+header-img: "img/post-bg-01.jpg"
 ---
 
 ![pic]({{ site.baseurl }}/images/multi_myth.jpg)<br>

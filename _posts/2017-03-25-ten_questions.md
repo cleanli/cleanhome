@@ -3,7 +3,7 @@ layout: post
 title: 【转载】值得无神论者深深思考的十个问题 
 categories: 思考
 tags: ["转载"]
-header-img: "img/post-bg-03.jpg"
+header-img: "img/post-bg-01.jpg"
 ---
 ## 一、越是有规律的，越有可能是被造出来的。 ##
 

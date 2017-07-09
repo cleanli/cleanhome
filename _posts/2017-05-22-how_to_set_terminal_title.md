@@ -5,7 +5,7 @@ date:       2017-05-19 14:06:25 +0800
 author:     "Clean Li"
 categories: 技术
 tags: ["收藏",Ubuntu]
-header-img: "img/post-bg-03.jpg"
+header-img: "img/post-bg-01.jpg"
 ---
 
 以前旧版本的Ubuntu下的终端可以右键在标题栏上点击，菜单里就有一项可以改终端的标题。在Ubuntu 16.04下发现竟然没有这一项了。在网上找了一下，发现原来是可以在终端里面使用命令改的。方法是在Home目录的`.bashrc`里面加上如下代码：
