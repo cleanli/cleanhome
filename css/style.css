@@ -9,7 +9,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 100%;
 }
 
-.linkslist ul {
+.linkslist ul, .archiveslist ul, .categorieslist ul, .tagslist ul{
     list-style: none
 }
 
@@ -606,6 +606,14 @@ section.comment {
     padding-right: 1em;
 }
 
+@media only screen and (min-width: 768px) {
+    .archiveslist {
+        width: 45%;
+        float: left;
+        margin: 0 5% 0 0
+    }
+}
+
 @media only screen and (min-width: 1024px) {
     .archiveslist {
         width: 100%;
@@ -614,7 +622,7 @@ section.comment {
     }
 }
 
-.archiveslist li {
+.archiveslist ul {
     font-size: .8em;
     line-height: 2em;
 }
