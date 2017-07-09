@@ -7,7 +7,9 @@
     {% if lyear != 0 %}
        {% capture yearstr %}{{ yearstr | append: '-' }}{% endcapture %}
        {% capture tmpstr %}{{ precount }}{% endcapture %}
-       {% capture tmpstr %}{{ tmpstr | lstrip | rstrip}}{% endcapture %}
+       {% if precount < 10 %}
+         {% capture yearstr %}{{ yearstr | append: '0' }}{% endcapture %}
+       {% endif %}
        {% capture yearstr %}{{ yearstr | append: tmpstr }}{% endcapture %}
        {% capture yearstr %}{{ yearstr | append: ',' }}{% endcapture %}
     {% endif %}
@@ -15,10 +17,12 @@
     {% assign precount = 0 %}
   {% endif %}
   {% capture lyear %}{{ post.date | date: '%Y%m' }}{% endcapture %}
-  {% capture precount %} {{ 1 | plus: precount }} {% endcapture %}
+  {% assign precount = precount | plus: 1 %}
 {% endfor %}
 {% capture yearstr %}{{ yearstr | append: '-' }}{% endcapture %}
 {% capture tmpstr %}{{ precount }}{% endcapture %}
-{% capture tmpstr %}{{ tmpstr | lstrip | rstrip}}{% endcapture %}
+{% if precount < 10 %}
+  {% capture yearstr %}{{ yearstr | append: '0' }}{% endcapture %}
+{% endif %}
 {% capture yearstr %}{{ yearstr | append: tmpstr }}{% endcapture %}
 {% assign yearsgroup = yearstr | split: "," %}

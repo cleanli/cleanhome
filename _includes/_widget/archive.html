@@ -4,7 +4,7 @@
 		<ul>
 			{% for member in yearsgroup %}
 			{% assign tmpv = member | split: "-" %}
-			<a href="{{ site.baseurl }}/{{ site.archives_path }}#{{ tmpv[0] }}" onclick="showid('{{ tmpv[0] }}')">{{ tmpv[0] }}</a><sup>({{ tmpv[1]}})</sup><br>
+			<a href="{{ site.baseurl }}/{{ site.archives_path }}#{{ tmpv[0] }}" onclick="showid('{{ tmpv[0] }}')">{{ tmpv[0] }}</a><sup>({{ tmpv[1]}})</sup> &nbsp;&nbsp;
 			{% endfor %}
 		</ul>
 </div>

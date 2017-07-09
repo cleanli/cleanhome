@@ -7,7 +7,7 @@ title: "归档"
   <ul class="nav nav-tabs">
 	  {% for member in yearsgroup %}
 	  {% assign tmpv = member | split: "-" %}
-	  <li><a href="#{{ tmpv[0] }}-ref" data-toggle="tab" id="{{ tmpv[0] }}-id"> {{ tmpv[0] }}<br><sup>({{tmpv[1]}})</sup></a></li>
+	  <li><a href="#{{ tmpv[0] }}-ref" data-toggle="tab" id="{{ tmpv[0] }}-id"> {{ tmpv[0] }}<sup>({{tmpv[1]}})</sup></a></li>
 	  {% endfor %}
   </ul>
 </div>
