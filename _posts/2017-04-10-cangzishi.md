@@ -4,6 +4,7 @@ title: 【转载】贵州平塘藏字石
 date:   2017-04-10 22:20:33 +0800
 categories: 探索
 tags: ["转载","奇迹"]
+header-img: "img/post-bg-03.jpg"
 ---
 Clean注：此石实属奇迹，故收录此。
 
