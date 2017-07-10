@@ -15,7 +15,7 @@ github_username:  cleanli
 # Build settings
 markdown: kramdown
 highlighter: rouge
-paginate: 12
+paginate: 16
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 # path
