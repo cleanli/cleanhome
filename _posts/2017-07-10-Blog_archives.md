@@ -14,7 +14,6 @@ $ gem install jekyll-archives
 ```
 
 2. 如下patch
-
 ```diff
 diff --git a/Gemfile b/Gemfile
 index 7f7a43c..f710490 100644
@@ -22,7 +21,7 @@ index 7f7a43c..f710490 100644
 +++ b/Gemfile
 @@ -1,6 +1,7 @@
  source 'https://rubygems.org'
- 
+　　 
  group :jekyll_plugins do
 +  gem "jekyll-archives"
    gem "jekyll-paginate"
@@ -35,7 +34,7 @@ index 0c68a2b..2fd2016 100644
 @@ -23,4 +23,11 @@ categories_path: categories.html
  tags_path: tags.html
  permalink: /posts/:month-:day-:year/:title.html
- 
+　　 
 -gems: [jekyll-paginate, jekyll-feed]
 +jekyll-archives:
 +  enabled:
@@ -113,4 +112,4 @@ index 0000000..d002f40
 {% assign yearsgroup = yearstr | split: "," %}
 ```{% endraw %}
 
-最后得到的yearsgroup类似为：“2015-02,2014-12”，再取出年份和数量写到网页上就可以了
+最后得到的yearsgroup类似为：“201703-13,201610-01”，再取出年份和数量写到网页上就可以了
