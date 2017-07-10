@@ -492,14 +492,6 @@ section.comment {
     transition: color 0.5s
 }
 
-@media only screen and (min-width: 768px) {
-    .categorieslist {
-        width: 45%;
-        float: left;
-        margin: 0 5% 0 0
-    }
-}
-
 @media only screen and (min-width: 1024px) {
     .categorieslist {
         width: 100%;
@@ -523,14 +515,6 @@ section.comment {
 
 .tagslist {
     margin: 1em 0 0;
-}
-
-@media only screen and (min-width: 768px) {
-    .tagslist {
-        width: 45%;
-        float: left;
-        margin: 0 5% 0 0
-    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -566,14 +550,6 @@ section.comment {
     width: 100%;
 }
 
-@media only screen and (min-width: 768px) {
-    .rsspart {
-        float: left;
-        width: 45%;
-        margin: 0 5% 0 0
-    }
-}
-
 @media only screen and (min-width: 1024px) {
     .rsspart {
         width: 100%;
@@ -604,14 +580,6 @@ section.comment {
 
 .archiveslist {
     padding-right: 1em;
-}
-
-@media only screen and (min-width: 768px) {
-    .archiveslist {
-        width: 45%;
-        float: left;
-        margin: 0 5% 0 0
-    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -667,14 +635,6 @@ section.comment {
     }
 }
 
-@media only screen and (min-width: 768px) {
-    .tagcloudlist {
-        width: 45%;
-        float: left;
-        margin: 0 5% 0 0
-    }
-}
-
 @media only screen and (min-width: 1024px) {
     .tagcloudlist {
         width: 100%;
@@ -700,14 +660,6 @@ section.comment {
 
 .linkslist {
     margin-top: .2em;
-}
-
-@media only screen and (min-width: 768px) {
-    .linkslist {
-        width: 45%;
-        float: left;
-        margin: 0 5% 0 0
-    }
 }
 
 @media only screen and (min-width: 1024px) {
