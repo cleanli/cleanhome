@@ -57,7 +57,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     line-height: 1.8;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 600px) {
     #main {
         margin: 0 0 0;
         width: 75%;
@@ -463,7 +463,7 @@ section.comment {
     padding: .5em 2% 1em;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 600px) {
     #asidepart {
         position: relative;
         float: left;
