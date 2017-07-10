@@ -7,6 +7,7 @@ description: "黎涛的博客"
 baseurl: "/cleanhome"
 url: "http://cleanhome.com"
 github_username: cleanli
+totop: true
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
