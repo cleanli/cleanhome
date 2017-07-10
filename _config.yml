@@ -1,12 +1,12 @@
 # Site settings
 title: CleanLi的博客
 header-img: img/home-bg.jpg
-email: clean_li@yahoo.com
+email_username: clean_li@yahoo.com
 copyright_name: Clean Li
-description: "Write your site description here. It will be used as your sites meta description as well!"
+description: "黎涛的博客"
 baseurl: "/cleanhome"
 url: "http://cleanhome.com"
-github_username:  cleanli
+github_username: cleanli
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
