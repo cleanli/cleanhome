@@ -90,3 +90,11 @@ arm-eabi-objdump -d -S libcamera.so > /tmp/asm
 :g/keyword/d
 ```
 
+- Jekyll局域网访问
+```
+$ jekyll serve -w --host=0.0.0.0
+...
+    Server address: http://0.0.0.0:4000/cleanhome/
+  Server running... press ctrl-c to stop.
+
+```
