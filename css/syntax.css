@@ -13,6 +13,10 @@
   white-space: pre;       // forces <code> to respect <pre> formatting
 }
 
+pre code {
+  white-space: pre;    //make code scrolling in x 20170711
+}
+
 .highlight table td { padding: 0px; }
 .highlight table pre { margin: 0; }
 .highlight .table {
