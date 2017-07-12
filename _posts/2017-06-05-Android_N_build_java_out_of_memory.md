@@ -86,7 +86,7 @@ $ make iso_img -j4
 ```
 
 ### Build Error and Solution
-#### ---- Met error: Out of memory error
+#### --- Met error: Out of memory error
 ```
 [ 33% 12328/36270] Building with Jack: out/target/common/obj/JAVA_LIBRARIES/core-oj_intermediates/dex-dir/classes.dex
 FAILED: /bin/bash out/target/common/obj/JAVA_LIBRARIES/core-oj_intermediates/dex-dir/classes.dex.rsp
@@ -114,7 +114,7 @@ clean@M$ ./prebuilts/sdk/tools/jack-admin start-server
 Launching Jack server java -XX:MaxJavaStackTraceDepth=-1 -Djava.io.tmpdir=/tmp -Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4g -cp /home/clean/.jack-server/launcher.jar com.android.jack.launcher.ServerLauncher
 ```
 <br>
-#### ---- Met error: No module named mako.template
+#### --- Met error: No module named mako.template
 ```
 FAILED: /bin/bash -c "python external/mesa/src/compiler/glsl/ir_expression_operation.py strings > out/target/product/x86/gen/STATIC_LIBRARIES/libmesa_glsl_intermediates/glsl/ir_expression_operation_strings.h"
 Traceback (most recent call last):
@@ -132,7 +132,7 @@ $ sudo apt-get install python-mako
 ```
 
 <br>
-#### ---- Met Message: no isohybird
+#### --- Met Message: no isohybird
 ```
 /bin/bash: isohybrid: command not found
 isohybrid not found.
@@ -148,7 +148,7 @@ $ sudo apt-get install syslinux-utils
 ```
 
 <br>
-#### ---- Met Error: isolinux.bin missing or corrupt
+#### --- Met Error: isolinux.bin missing or corrupt
 Get this error message when test the boot image with USB stick.
 
 __Solution:__
