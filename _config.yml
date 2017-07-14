@@ -23,7 +23,7 @@ exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 categories_path: categories.html
 tags_path: tags.html
 archives_path: archives.html
-permalink: /posts/:month-:day-:year/:title.html
+permalink: /posts/:year-:month-:day/:title.html
 
 links:
   Clean的收藏: https://longhistory.github.io/clean_collecting/index.html
