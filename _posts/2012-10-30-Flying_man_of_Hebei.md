@@ -1416,6 +1416,8 @@ header-img: "img/post-bg-01.jpg"
 
 <a id="part04"></a>
 ### 河北肥乡飞人事件当事人黄延秋、世界华人UFO目击调查部主任张靖平接受焦点网记者专访，再谈离奇飞行事件，回答公众疑问
+2011-02-10 19:57:48
+
 （转自张靖平博客：[肥乡飞人事件新调查报道](http://blog.sina.com.cn/s/blog_4ca903250100oix6.html)）
 
 ![图片]({{ site.baseurl }}/images/feiren/j.jpg)<br>
