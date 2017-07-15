@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 【转载】中国三大UFO悬疑事件之——河北飞人
+title: 【转载】30年前河北肥乡飞人事件
 date:   2012-10-30 23:31:00 +0800
 categories: 探索
 tags: ["转载","奇迹"]
