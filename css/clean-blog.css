@@ -404,6 +404,10 @@ img::-moz-selection {
   background: transparent;
 }
 body {
+/*!
+  background-color: #f0f7d5;
+*/
+  background-color: #eaeca1;
   webkit-tap-highlight-color: #0085a1;
 }
 .badge {
@@ -420,7 +424,7 @@ body {
   background-color: #2ba5ca;
   border-radius: 5px;
 }
-hr {
+article hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
