@@ -1889,6 +1889,8 @@ header-img: "img/post-bg-01.jpg"
 原文链接：[肥乡神秘超人飞行事件最新调查记](http://blog.sina.com.cn/s/blog_566fe3a80100vk58.html)
 
 河北肥乡UFO研究会 冀建民
+
+1995年7月27日
  
 编者前言:
  
