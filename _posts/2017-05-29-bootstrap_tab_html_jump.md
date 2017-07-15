@@ -4,7 +4,7 @@ title:      "【原创】Bootstrap Tab网页的跳转定位"
 date:       2017-05-29 09:31:36 +0800
 author:     "Clean Li"
 categories: 技术
-tags: ["原创",JavaScript,Jekyll]
+tags: ["原创",JavaScript,Jekyll,"博客技术"]
 header-img: "img/post-bg-01.jpg"
 ---
 #### 背景
