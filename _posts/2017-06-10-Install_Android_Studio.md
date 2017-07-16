@@ -34,3 +34,17 @@ $ ./studio.sh
 点击菜单栏的 Tools -> Create Desktop Entry 建立桌面快捷方式
 
 完成～
+
+**问题**
+
+解决AndroidStudio导入项目在 Building gradle project info 一直卡住 
+
+Android Studio导入项目的时候，一直卡在Building gradle project info这一步，主要原因还是因为被墙的结果。gradle官网虽然可以访问，但是速度连蜗牛都赶不上...
+
+解决方法：
+
+1 下载gradle-3.3-all.zip
+
+2 解压到某个目录，比如/home/xxx/install/gradle-3.3
+
+3 在File-Setting-Build,Execution,Deployment-Gradle，设定local gradle distribution
