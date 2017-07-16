@@ -141,14 +141,14 @@ rm $HOME/.dhs/tmp
 ```
 Or download: [bashrcap]({{ site.baseurl }}/downloads/ubuntu_install/bashrcap), and add to the end of `.bashrc`
 ```
-$ cd ~
-$ cat bashrcap >> .bashrc
+cd ~
+cat bashrcap >> .bashrc
 ```
 
 #### 2 Extract the bin.tar.gz in home directory: [bin.tar.gz]({{ site.baseurl }}/downloads/ubuntu_install/bin.tar.gz)
 ```
-$ cd ~
-$ tar xzvf bin.tar.gz
+cd ~
+tar xzvf bin.tar.gz
 ```
 Main command inside is: adb, fastboot, repo
 
@@ -158,52 +158,53 @@ And the commands defined by myself:
 
 #### 3 Installing Java and other needed components for Android source building
 ```console
-$ sudo apt-get update
-$ sudo apt-get install openjdk-8-jdk
-$ sudo update-alternatives --config java
-$ sudo update-alternatives --config javac
-$ sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip
+sudo apt-get update
+sudo apt-get install openjdk-8-jdk
+sudo update-alternatives --config java
+sudo update-alternatives --config javac
+sudo apt-get install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev lib32z-dev ccache libgl1-mesa-dev libxml2-utils xsltproc unzip
 ```
 
 #### 4 Installing Vim
 ```console
-$ sudo apt-get vim
+sudo apt-get vim
 ```
 Then extract the vim.tar.gz in home directory: [vim.tar.gz]({{ site.baseurl }}/downloads/ubuntu_install/vim.tar.gz)
 ```
-$ cd ~
-$ tar xzvf vim.tar.gz
+cd ~
+tar xzvf vim.tar.gz
 ```
 
 #### 5 Installing and initilizing others
 ```console
-$ sudo apt-get install cscope
-$ sudo apt-get install ctags
-$ sudo apt-get install meld
-$ sudo apt-get install tree
-$ sudo apt-get install gitk
-$ git config --global user.email "clean_li@yahoo.com"
-$ git config --global user.name "clean_li"
-$ git config --global core.editor vim
+sudo apt-get install cscope
+sudo apt-get install ctags
+sudo apt-get install meld
+sudo apt-get install tree
+sudo apt-get install gitk
+sudo apt-get install virtualbox
+git config --global user.email "clean_li@yahoo.com"
+git config --global user.name "clean_li"
+git config --global core.editor vim
 ```
 
 #### 6 Installing Jekyll
 ```console
-$ sudo apt-get install ruby
-$ sudo apt-get install ruby-dev
-$ ruby -v
+sudo apt-get install ruby
+sudo apt-get install ruby-dev
+ruby -v
 ruby 2.3.1p112 (2016-04-26) [x86_64-linux-gnu]
-$ gem -v
+gem -v
 2.5.1
-$ sudo gem install jekyll
-$ sudo gem install bundler
-$ sudo gem install jekyll-paginate
-$ sudo gem install addressable -v 2.5.0
-$ sudo gem install sass -v 3.4.23
-$ sudo gem install jekyll-feed
-$ sudo gem uninstall addressable -v 2.5.1
-$ sudo gem uninstall sass -v 3.4.24
-$ git clone https://github.com/cleanli/cleanhome.git
-$ cd cleanhome/
-$ jekyll serve
+sudo gem install jekyll
+sudo gem install bundler
+sudo gem install jekyll-paginate
+sudo gem install addressable -v 2.5.0
+sudo gem install sass -v 3.4.23
+sudo gem install jekyll-feed
+sudo gem uninstall addressable -v 2.5.1
+sudo gem uninstall sass -v 3.4.24
+git clone https://github.com/cleanli/cleanhome.git
+cd cleanhome/
+jekyll serve
 ```

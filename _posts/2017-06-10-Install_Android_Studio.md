@@ -48,3 +48,5 @@ Android Studio导入项目的时候，一直卡在Building gradle project info�
 2 解压到某个目录，比如/home/xxx/install/gradle-3.3
 
 3 在File-Setting-Build,Execution,Deployment-Gradle，设定local gradle distribution
+
+或者直接放在这里，~/.gradle/wrapper/dists/gradle-3.3-all/55gk2rcmfc6p2dg9u9ohc3hw9
