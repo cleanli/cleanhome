@@ -438,23 +438,38 @@ article hr {
   background-color: #449d44;
 }
 .leftleft {
-	margin: 0.2em 0;
+	margin: 0.8em 0 0 0;
 }
 .rightright {
-	margin: 0.2em 0;
+	margin: 0 0 0.8em 0;
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 350px) {
 .leftleft {
 	margin: 0.2em 0;
         float: left;
-	width: 20%
+	width: 30%
 }
 }
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 350px) {
 .rightright {
 	margin: 0.2em 0;
         position: relative;
         float: left;
-	width: 77%
+	width: 69%
+}
+}
+@media only screen and (min-width: 650px) {
+.leftleft {
+	margin: 0.2em 0;
+        float: left;
+	width: 18%
+}
+}
+@media only screen and (min-width: 650px) {
+.rightright {
+	margin: 0.2em 0;
+        position: relative;
+        float: left;
+	width: 81%
 }
 }
