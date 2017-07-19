@@ -1,9 +1,9 @@
-	    <li style="line-height: 35px;">
-		    <span class="text-muted">{{ node.date | date: "%Y-%m-%d" }} </span><a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a>
+<div class="leftleft">
+	<span class="text-muted">{{ node.date | date: "%Y-%m-%d" }} </span>
+</div>
+<div class="rightright">
+	<a href="{{ site.baseurl }}{{node.url}}">{{node.title}}</a>
 		    <br>
-			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-			    &nbsp;
 			    <sup>
 		    <span class="meta">
                       {% assign categories_list = node.categories %}
@@ -39,4 +39,4 @@
                       {% assign tags_list = nil %}
 			    </sup>
 		    </span>
-	    </li>
+</div>

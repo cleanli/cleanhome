@@ -437,3 +437,24 @@ article hr {
 .catcats:focus {
   background-color: #449d44;
 }
+.leftleft {
+	margin: 0.2em 0;
+}
+.rightright {
+	margin: 0.2em 0;
+}
+@media only screen and (min-width: 500px) {
+.leftleft {
+	margin: 0.2em 0;
+        float: left;
+	width: 20%
+}
+}
+@media only screen and (min-width: 500px) {
+.rightright {
+	margin: 0.2em 0;
+        position: relative;
+        float: left;
+	width: 77%
+}
+}
