@@ -6,35 +6,33 @@
 			    &nbsp;
 			    <sup>
 		    <span class="meta">
-                      类别:
                       {% assign categories_list = node.categories %}
                       {% if categories_list.first[0] == null %}
                         {% for category in categories_list %}
-                                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category | replace:' ','-' }}">
-                                  {{ category | capitalize }}({{ site.categories[category].size }})
+                                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category | replace:' ','-' }}" onclick="showid('{{ category | replace:' ','-' }}')">
+					<span class="badge catcats">{{ category | capitalize }}</span>
                                </a>
                         {% endfor %}
                       {% else %}
                         {% for category in categories_list %}
-                                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace:' ','-' }}">
-                                    {{ category[0] | capitalize }}({{ category[1].size }})
+                                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace:' ','-' }}" onclick="showid('{{ category[0] | replace:' ','-' }}')">
+					<span class="badge catcats">{{ category[0] | capitalize }}</span>
                                 </a>
                         {% endfor %}
                       {% endif %}
                       {% assign categories_list = nil %}
     
-                    &nbsp;&nbsp; 标签:
                       {% assign tags_list = node.tags %}
                       {% if tags_list.first[0] == null %}
                         {% for tag in tags_list %}
-                                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag | replace:' ','-' }}">
-                                  {{ tag | capitalize }}({{ site.tags[tag].size }})
+                                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag | replace:' ','-' }}" onclick="showid('{{ tag | replace:' ','-' }}')">
+					<span class="badge btn-success">{{ tag | capitalize }}</span>
                                </a>  
                         {% endfor %}
                       {% else %}
                         {% for tag in tags_list %}
-                                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] | replace:' ','-' }}">
-                                    {{ tag[0] | capitalize }}({{ tag[1].size }})
+                                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] | replace:' ','-' }}" onclick="showid('{{ tag[0] | replace:' ','-' }}')">
+					<span class="badge btn-success">{{ tag[0] | capitalize }}</span>
                                 </a>  
                         {% endfor %}
                       {% endif %}
