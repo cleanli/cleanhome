@@ -4,7 +4,7 @@ title:      "【转载】君士坦丁大帝"
 subtitle:   "最有影响力的世界帝王之一"
 date:       2017-07-20 09:57:25 +0800
 categories: 其它
-tags: ["原创","历史"]
+tags: ["转载","历史"]
 ---
 （转自历史上的今天：[君士坦丁大帝](http://www.todayonhistory.com/people/201512/12207.html)）
 
