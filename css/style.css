@@ -43,14 +43,42 @@
 }
 
 #main {
-    margin: 0 0 0;
+    background: #f8f8f8;
+    margin: 1em 0 0;
     line-height: 1.8;
+    padding: .5em 2% 1em;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 480px) {
     #main {
-        margin: 0 0 0;
-        width: 75%;
+        margin: 1em 1% 0 1%;
+        width: 74%;
+        float: left;
+        -webkit-transition: margin 0.5s ease-out;
+        -moz-transition: margin 0.5s ease-out;
+        -o-transition: margin 0.5s ease-out;
+        -ms-transition: margin 0.5s ease-out;
+        transition: margin 0.5s ease-out
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #main {
+        margin: 1em 2% 0 5%;
+        width: 68%;
+        float: left;
+        -webkit-transition: margin 0.5s ease-out;
+        -moz-transition: margin 0.5s ease-out;
+        -o-transition: margin 0.5s ease-out;
+        -ms-transition: margin 0.5s ease-out;
+        transition: margin 0.5s ease-out
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #main {
+        margin: 1em 2% 0 10%;
+        width: 60%;
         float: left;
         -webkit-transition: margin 0.5s ease-out;
         -moz-transition: margin 0.5s ease-out;
@@ -448,17 +476,35 @@ section.comment {
 }
 
 #asidepart {
-    background: #fafafa;
+    background: #f8f8f8;
     margin: 1em 0 0;
     padding: .5em 2% 1em;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 480px) {
     #asidepart {
         position: relative;
         float: left;
-        width: 18%;
-        margin: 1em 0 0 3%
+        width: 22%;
+        margin: 1em 0 0 1%
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    #asidepart {
+        position: relative;
+        float: left;
+        width: 20%;
+        margin: 1em 0 0 1%
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #asidepart {
+        position: relative;
+        float: left;
+        width: 17%;
+        margin: 1em 0 0 1%
     }
 }
 

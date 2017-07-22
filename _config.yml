@@ -16,7 +16,7 @@ totop: true
 # Build settings
 markdown: kramdown
 highlighter: rouge
-paginate: 16
+paginate: 18
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 # path
