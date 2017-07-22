@@ -5,10 +5,10 @@ date:       2017-07-17 22:35:15 +0800
 categories: 技术
 tags: ["原创",Android,Camera]
 ---
-在<a href="{{ site.baseurl }}{% post_url 2017-06-05-Android_N_build_java_out_of_memory %}">【记录】编译测试Android nougat-x86</a>这里编译了Android nougat-x86之后，安装在电脑上，可以正常启动，而且插上usb camera之后还可以打开相机。于是想验证一下Camera的流程。
+在<a href="{{ site.baseurl }}{% post_url tech/2017-06-05-Android_N_build_java_out_of_memory %}">【记录】编译测试Android nougat-x86</a>这里编译了Android nougat-x86之后，安装在电脑上，可以正常启动，而且插上usb camera之后还可以打开相机。于是想验证一下Camera的流程。
 
 这里使用的Camera app是自己写的GoldCam<br>
-<a href="{{ site.baseurl }}{% post_url 2017-06-27-GoldCam %}">【原创】写了一个Camera App：GoldCam</a><br>
+<a href="{{ site.baseurl }}{% post_url tech/2017-06-27-GoldCam %}">【原创】写了一个Camera App：GoldCam</a><br>
 安装在电脑的Android上，可以打开usb的camera。
 
 先观察`Camera.open(cameraId)`这个动作，这里使用的是`Camera API 1`，所以framework这边会走<br>
