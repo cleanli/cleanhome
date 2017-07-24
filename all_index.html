@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "所有文章"
 header-img: "img/post-bg-02.jpg"
 ---
+<h3 class="index_hint">共{{ site.posts.size }}篇文章</h3>
 <ul>
   {% for post in site.posts %}
       <span class="ai-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
