@@ -1,4 +1,4 @@
-.linkslist ul, .archiveslist ul, .categorieslist ul, .tagslist ul{
+.ab ul, .linkslist ul, .archiveslist ul, .categorieslist ul, .tagslist ul{
     padding: 0;
     list-style: none
 }
@@ -718,6 +718,40 @@ section.comment {
 }
 
 .linkslist ul a:hover {
+    color: #2ca6cb;
+    -webkit-transition: color 0.25s;
+    -moz-transition: color 0.25s;
+    -o-transition: color 0.25s;
+    -ms-transition: color 0.25s;
+    transition: color 0.25s
+}
+
+.ab {
+    margin-top: .2em;
+}
+
+@media only screen and (min-width: 1024px) {
+    .ab {
+        width: 100%;
+        float: none;
+        margin: 1em 0 0
+    }
+}
+
+.ab ul {
+    margin-left: .8em;
+    color: #888;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: .1em 0 0;
+}
+
+.ab ul a {
+    margin-left: -.3em;
+    display: block;
+}
+
+.ab ul a:hover {
     color: #2ca6cb;
     -webkit-transition: color 0.25s;
     -moz-transition: color 0.25s;
