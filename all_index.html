@@ -1,0 +1,11 @@
+---
+layout: page
+title: "所有文章"
+header-img: "img/post-bg-02.jpg"
+---
+<ul>
+  {% for post in site.posts %}
+      <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
+  {% endfor %}
+</ul>
