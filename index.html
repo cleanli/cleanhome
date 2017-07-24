@@ -3,6 +3,10 @@ layout: page
 description: "黎涛的博客"
 ---
 
+{% if paginator.previous_page %}
+{% else %}
+<h3 class="index_hint">最近的文章</h3>
+{% endif %}
 {% for post in paginator.posts %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
