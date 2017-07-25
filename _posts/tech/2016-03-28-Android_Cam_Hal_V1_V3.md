@@ -5,6 +5,8 @@ date:       2016-03-28 00:00:00 +0800
 categories: 技术
 tags: ["转载",Android,Camera]
 ---
+(注：转载于为知笔记)
+
 转眼一看，上一次发博文都快是三年之前了，惭愧 ! 主要是三年前找的这份工作，虽然是世界500强的技术大牛公司，但是工作可一点都不高大上，非常的忙，一天不但要处理各种camera的bug，还要开发 camera的各种feature和sensor驱动，还要和内部、外部的人各种扯皮，你懂的。忙的三年了才有闲心来发表这片博文。
 
 牢骚已完，言归正传。
@@ -121,5 +123,3 @@ typedef enum camera_metadata_section_start {
 +    mSensor->setSaturation(entry.data.i32[0]); 
 +    }
 ```
-
-注：转载于为知笔记
