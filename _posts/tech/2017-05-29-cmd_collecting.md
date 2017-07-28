@@ -113,3 +113,8 @@ $ jekyll serve -w --host=0.0.0.0
     Server address: http://0.0.0.0:4000/cleanhome/
   Server running... press ctrl-c to stop.
 ```
+---
+安装gimp
+```
+sudo apt-get install gimp
+```
