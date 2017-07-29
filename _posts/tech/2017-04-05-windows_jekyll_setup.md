@@ -2,7 +2,7 @@
 layout: post
 title: 【转载】Windows上安装Jekyll
 categories: 技术
-tags: ["转载",Jekyll]
+tags: ["转载",Jekyll,"博客技术"]
 ---
  Jekyll是一个静态网站生成工具。它允许用户使用HTML、Markdown或Textile来建立静态页面，然后通过模板引擎Liquid（Liquid Templating Engine）来运行.
 

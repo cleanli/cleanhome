@@ -3,7 +3,7 @@ layout:     post
 title:      "【原创】给博客增加归档功能"
 date:       2017-07-10 23:15:20 +0800
 categories: 技术
-tags: ["原创",Jekyll,Liquid]
+tags: ["原创",Jekyll,Liquid,"博客技术"]
 ---
 周末的时候给博客增加了归档（archives）功能，把过程做一下笔记。
 
