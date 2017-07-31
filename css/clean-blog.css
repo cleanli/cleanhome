@@ -478,15 +478,3 @@ article hr {
 .ai-meta {
 	color: #888
 }
-@media print {
-  a[href]:after {
-    content: "";
-  }
-  abbr[title]:after {
-    content: "";
-  }
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
-    content: "";
-  }
-}
