@@ -14,5 +14,13 @@ tags: ["原创",Android]
 git clone https://github.com/cleanli/clean_study.git
 ```
 
+更新记录：
+
+- 2017-07-31：<br>
+找到以前的socket的code，上传github保存
+
+- 2017-07-21：<br>
+添加了binder test code
+
 - 2017-07-18：<br>
 添加了在屏幕上画颜色框的测试code，来自frameworks/native/services/surfaceflinger/tests/resize/resize.cpp，增加了按键停顿和继续的功能
