@@ -72,6 +72,41 @@ layout: default
                     </li>
                     {% endif %}
                 </ul>
+		<div>
+			<h4 class="index_hint">相关文章</h4>
+			{%- assign tags_list = page.tags -%}
+			{%- if tags_list.first[0] == null -%}
+				{%- if tags_list.size > 1 -%}
+				  <ul>
+					{%- for page_tag in tags_list offset:1 -%}
+						{%- for tag in site.tags -%}
+							{%- if tag[0] == page_tag -%}
+							  {%- assign pages_list = tag[1] -%}
+							   {%- for post in pages_list -%}
+							    {%- if post.title != page.title -%}
+							    <span class="ai-meta">
+								  {{ post.date | date: "%Y-%m-%d" }}
+							    </span>
+							    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+							    <br>
+							    {%- endif -%}
+							   {%- endfor -%}
+							  {%- assign pages_list = nil -%}
+							{%- endif -%}
+						{%- endfor -%}
+					{%- endfor -%}
+				  </ul>
+				{%- else -%}
+				{%- endif -%}
+			{%- else -%}
+				{%- for tag in tags_list -%}
+				<a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] | replace:' ','-' }}">
+					{{ tag[0] | capitalize }}({{ tag[1].size }})
+				</a>
+				{%- endfor -%}
+			{%- endif -%}
+			{%- assign tags_list = nil -%}
+		</div>
 
     </div>
     <div id="asidepart">
