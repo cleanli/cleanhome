@@ -74,8 +74,8 @@ layout: default
                 </ul>
 		<div>
 			<h4 class="index_hint">相关文章</h4>
-			{%- assign tags_list = page.tags -%}
-			{%- if tags_list.first[0] == null -%}
+			{% assign tags_list = page.tags %}
+			{% if tags_list.first[0] == null %}
 			  <ul>
 				{%- assign related_count = 0 -%}
 				{%- if tags_list.size > 1 -%}
