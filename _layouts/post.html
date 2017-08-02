@@ -90,9 +90,15 @@ layout: default
 							    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 							    <br>
 							    {% assign related_count = related_count | plus: 1 %}
+							    {% if related_count > 11 %}
+							        {% break %}
+							    {% endif %}
 							    {% endif %}
 							   {% endfor %}
 							  {% assign pages_list = nil %}
+							{% endif %}
+							{% if related_count > 11 %}
+							    {% break %}
 							{% endif %}
 						{% endfor %}
 					{% endfor %}
