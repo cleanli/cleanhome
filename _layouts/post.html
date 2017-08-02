@@ -77,59 +77,59 @@ layout: default
 			{% assign tags_list = page.tags %}
 			{% if tags_list.first[0] == null %}
 			  <ul>
-				{%- assign related_count = 0 -%}
-				{%- if tags_list.size > 1 -%}
-					{%- for page_tag in tags_list offset:1 -%}
-						{%- for tag in site.tags -%}
-							{%- if tag[0] == page_tag -%}
-							  {%- assign pages_list = tag[1] -%}
-							   {%- for post in pages_list -%}
-							    {%- if post.title != page.title -%}
+				{% assign related_count = 0 %}
+				{% if tags_list.size > 1 %}
+					{% for page_tag in tags_list offset:1 %}
+						{% for tag in site.tags %}
+							{% if tag[0] == page_tag %}
+							  {% assign pages_list = tag[1] %}
+							   {% for post in pages_list %}
+							    {% if post.title != page.title %}
 							    <span class="ai-meta">
 								  {{ post.date | date: "%Y-%m-%d" }}
 							    </span>
 							    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 							    <br>
 							    {% assign related_count = related_count | plus: 1 %}
-							    {%- endif -%}
-							   {%- endfor -%}
-							  {%- assign pages_list = nil -%}
-							{%- endif -%}
-						{%- endfor -%}
-					{%- endfor -%}
-				{%- endif -%}
-				{%- if related_count < 5 -%}
-					{%- for page_cat in page.categories -%}
-						{%- for cat in site.categories -%}
-							{%- if cat[0] == page_cat -%}
-							  {%- assign pages_list = cat[1] -%}
-							   {%- for post in pages_list -%}
-							    {%- if post.title != page.title -%}
+							    {% endif %}
+							   {% endfor %}
+							  {% assign pages_list = nil %}
+							{% endif %}
+						{% endfor %}
+					{% endfor %}
+				{% endif %}
+				{% if related_count < 5 %}
+					{% for page_cat in page.categories %}
+						{% for cat in site.categories %}
+							{% if cat[0] == page_cat %}
+							  {% assign pages_list = cat[1] %}
+							   {% for post in pages_list %}
+							    {% if post.title != page.title %}
 							      <span class="ai-meta">
 							            {{ post.date | date: "%Y-%m-%d" }}
 							      </span>
 							      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 							      <br>
 							      {% assign related_count = related_count | plus: 1 %}
-							      {%- if related_count > 4 -%}
-							        {%- break -%}
-							      {%- endif -%}
-							    {%- endif -%}
-							   {%- endfor -%}
-							  {%- assign pages_list = nil -%}
-							{%- endif -%}
-						{%- endfor -%}
-					{%- endfor -%}
-				{%- endif -%}
+							      {% if related_count > 4 %}
+							        {% break %}
+							      {% endif %}
+							    {% endif %}
+							   {% endfor %}
+							  {% assign pages_list = nil %}
+							{% endif %}
+						{% endfor %}
+					{% endfor %}
+				{% endif %}
 			  </ul>
-			{%- else -%}
-				{%- for tag in tags_list -%}
+			{% else %}
+				{% for tag in tags_list %}
 				<a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] | replace:' ','-' }}">
 					{{ tag[0] | capitalize }}({{ tag[1].size }})
 				</a>
-				{%- endfor -%}
-			{%- endif -%}
-			{%- assign tags_list = nil -%}
+				{% endfor %}
+			{% endif %}
+			{% assign tags_list = nil %}
 		</div>
 
     </div>
