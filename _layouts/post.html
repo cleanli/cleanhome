@@ -76,7 +76,6 @@ layout: default
 			<h4 class="index_hint">相关文章</h4>
 			{% assign tags_list = page.tags %}
 			{% if tags_list.first[0] == null %}
-			  <ul>
 				{% assign related_count = 0 %}
 				{% if tags_list.size > 1 %}
 					{% for page_tag in tags_list offset:1 %}
@@ -86,7 +85,7 @@ layout: default
 							   {% for post in pages_list %}
 							    {% if post.title != page.title %}
 							    <span class="ai-meta">
-								  {{ post.date | date: "%Y-%m-%d" }}
+								    &nbsp;&nbsp; <sup>{{ post.date | date: "%Y-%m-%d" }}</sup>
 							    </span>
 							    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 							    <br>
@@ -106,7 +105,7 @@ layout: default
 							   {% for post in pages_list %}
 							    {% if post.title != page.title %}
 							      <span class="ai-meta">
-							            {{ post.date | date: "%Y-%m-%d" }}
+								    &nbsp;&nbsp; <sup>{{ post.date | date: "%Y-%m-%d" }}</sup>
 							      </span>
 							      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 							      <br>
@@ -121,7 +120,6 @@ layout: default
 						{% endfor %}
 					{% endfor %}
 				{% endif %}
-			  </ul>
 			{% else %}
 				{% for tag in tags_list %}
 				<a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] | replace:' ','-' }}">
