@@ -5,7 +5,7 @@ description: "黎涛的博客"
 
 {% if paginator.previous_page %}
 {% else %}
-<h4 class="index_hint"><a href="{{ site.baseurl }}/about.html">{{ site.blog_owner }}</a>最新的文章</h3>
+<h4 class="index_hint"><a href="{{ site.baseurl }}/about.html">{{ site.blog_owner }}</a>最新的文章</h4>
 {% endif %}
 {% for post in paginator.posts %}
 <div class="post-preview">
