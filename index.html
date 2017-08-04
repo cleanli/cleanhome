@@ -72,10 +72,8 @@ description: "黎涛的博客"
 </ul>
 {% endif %}
 <div class="pages_choose">
-    <!--
-    <div class="pages_hint">页面选择</div>
-    -->
     <div class="pages_show">
+	<span class="pages_hint">页面</span>
 	{% if paginator.total_pages > 9 %}
 	  {% assign pre_string = "0" %}
 	{% else %}
