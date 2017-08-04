@@ -479,3 +479,17 @@ article hr {
 .ai-meta {
 	color: #888
 }
+.pages_hint {
+	color: #2ca6cb;
+	margin: 1em 3% 0;
+	padding: 0.3em 0;
+	width: auto;
+  line-height: 1.2;
+}
+.pages_show {
+	margin: 1em 1% 0;
+	padding: 0.2em 0.2em;
+}
+.pages_choose {
+	text-align:center;
+}
