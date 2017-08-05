@@ -1,6 +1,7 @@
 ---
 layout:     post
-title:      "【原创】天文观测软件Stellarium使用笔记"
+title:      "【原创】学古人观星相"
+subtitle:   "天文观测软件Stellarium使用笔记"
 date:       2017-07-20 17:11:55 +0800
 categories: 其它
 tags: ["原创","天文"]
