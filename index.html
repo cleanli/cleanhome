@@ -12,12 +12,14 @@ description: "黎涛的博客"
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
         </h2>
+    </a>
         {% if post.subtitle %}
+    <a href="{{ post.url | prepend: site.baseurl }}">
         <h3 class="post-subtitle">
             {{ post.subtitle }}
         </h3>
-        {% endif %}
     </a>
+        {% endif %}
     <p class="post-meta">发表于{{ post.date | date: "%Y-%m-%d" }} &nbsp;&nbsp; 类别:
       {% assign categories_list = post.categories %}
       {% if categories_list.first[0] == null %}
