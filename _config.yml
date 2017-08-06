@@ -9,6 +9,7 @@ baseurl: "/cleanhome"
 url: "http://cleanhome.com"
 github_username: cleanli
 totop: true
+barcode: img/cleanli.png
 
 # Google Analytics
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
@@ -40,6 +41,7 @@ widgets:
 - tag
 - archive
 - links
+- barcode
 ## provide seven widgets:category,tag,rss,archive,tagcloud,links,weibo,douban
 
 gems: [jekyll-paginate, jekyll-feed]

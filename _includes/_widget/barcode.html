@@ -1,0 +1,6 @@
+{% if site.barcode | size != 0 %}
+<div class="ab">
+  <p class="asidetitle">二维码</p>
+	<img alt="link" src="{{ site.baseurl }}/{{ site.barcode }}">
+</div>
+{% endif %}
