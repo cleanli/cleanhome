@@ -75,6 +75,7 @@ layout: default
 		<div>
 			<h4 class="index_hint">相关文章</h4>
 			{% assign tags_list = page.tags %}
+			{% assign titlestr = "" %}
 			{% if tags_list.first[0] == null %}
 				{% assign related_count = 0 %}
 				{% if tags_list.size > 1 %}
@@ -89,6 +90,8 @@ layout: default
 							    </span>
 							    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 							    <br>
+							    {% capture titlestr %}{{ titlestr | append: post.title }}{% endcapture %}
+							    {% capture titlestr %}{{ titlestr | append: "^^" }}{% endcapture %}
 							    {% assign related_count = related_count | plus: 1 %}
 							    {% if related_count > 11 %}
 							        {% break %}
@@ -109,7 +112,8 @@ layout: default
 							{% if cat[0] == page_cat %}
 							  {% assign pages_list = cat[1] %}
 							   {% for post in pages_list %}
-							    {% if post.title != page.title %}
+							    {% if post.title == page.title or titlestr contains post.title %}
+							      {% else %}
 							      <span class="ai-meta">
 								    &nbsp;&nbsp; <sup>{{ post.date | date: "%Y-%m-%d" }}</sup>
 							      </span>
