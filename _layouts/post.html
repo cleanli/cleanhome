@@ -13,6 +13,9 @@ layout: default
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% endif %}
                     <span class="meta pull-right">
+		      {% if page.tags contains '原创' %}
+		      CleanLi（黎涛）
+		      {% endif %}
                       发表于{{ page.date | date: "%Y-%m-%d" }} &nbsp;&nbsp; 类别:
                       {% assign categories_list = page.categories %}
                       {% if categories_list.first[0] == null %}
