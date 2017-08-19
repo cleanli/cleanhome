@@ -13,6 +13,7 @@ def getCat
 		@i += 1
 	end
 	puts "Enter cates<5>:"
+	STDOUT.flush
 	mychs = String.new(gets)
 	mychs.chomp!
 	mychs.strip!
@@ -48,6 +49,7 @@ def getTag
 		@i += 1
 	end
 	puts "Enter tags<1>:"
+	STDOUT.flush
 	mychs = String.new(gets)
 	mychs.chomp!
 	mychs.strip!
@@ -68,6 +70,7 @@ def getTag
 			@i += 1
 		end
 		puts "Enter more tags<null to quit>:"
+		STDOUT.flush
 		mychs2 = String.new(gets)
 		mychs2.chomp!
 		mychs2.strip!
@@ -83,6 +86,7 @@ time = Time.new
  
 $filename = ""
 puts "Enter prefered filename:"
+STDOUT.flush
 myStr = String.new(gets)
 myStr.chomp!
 myStr.strip!
@@ -92,6 +96,7 @@ if myStr.empty?
 else
 	puts "Got filename:"
 	puts myStr
+	STDOUT.flush
 	up_myStr = myStr.upcase
 	myStr[0] = up_myStr[0] unless up_myStr.empty?
 	$filename = time.strftime("%Y-%m-%d-") + myStr
@@ -105,6 +110,7 @@ else
 	puts
 	puts
 	puts "Enter title:"
+	STDOUT.flush
 	$myTitle = String.new(gets)
 	$myTitle.chomp!
 	$myTitle.strip!
@@ -112,6 +118,7 @@ else
 	puts
 	puts
 	puts "Enter subtitle:"
+	STDOUT.flush
 	mySubtitle = String.new(gets)
 	mySubtitle.chomp!
 	mySubtitle.strip!
