@@ -55,6 +55,7 @@ def getTag
 		mychs = mychs + '1'
 	end
 	mytag = '["' + tagArray[mychs.to_i] + '"'
+	$myTitle = '【' + tagArray[mychs.to_i] + '】' + $myTitle
 
 	tagStr2 = String.new("奇迹,历史,电影,濒死体验,Shell,Android,特异功能,Selinux,搞笑,Camera,Vim,Makefile,预言,Git,法律,传说,修行,轮回转世,史前文明,Jekyll,博客技术,英语,文化,进化论,信仰,Ubuntu,购物,Linux,虚拟机,Windows,JavaScript,Liquid,Grub,天文")
 	tagArray2 = tagStr2.split(',')
@@ -104,9 +105,9 @@ else
 	puts
 	puts
 	puts "Enter title:"
-	myTitle = String.new(gets)
-	myTitle.chomp!
-	myTitle.strip!
+	$myTitle = String.new(gets)
+	$myTitle.chomp!
+	$myTitle.strip!
 
 	puts
 	puts
@@ -127,7 +128,7 @@ else
 
 	puts "---"
 	puts "layout: post"
-	puts "title: " + '"' + myTitle + '"'
+	puts "title: " + '"' + $myTitle + '"'
 	puts "date: " + time.strftime("%Y-%m-%d %H:%M:%S %z")
 	puts "subtitle: " + '"' + mySubtitle + '"' unless mySubtitle.empty?
 	puts "categories: " + '"' + myCate + '"'
@@ -138,7 +139,7 @@ else
 	if aFile
 		aFile.puts "---"
 		aFile.puts "layout: post"
-		aFile.puts "title: " + '"' + myTitle + '"'
+		aFile.puts "title: " + '"' + $myTitle + '"'
 		aFile.puts "date: " + time.strftime("%Y-%m-%d %H:%M:%S %z")
 		aFile.puts "subtitle: " + '"' + mySubtitle + '"' unless mySubtitle.empty?
 		aFile.puts "categories: " + '"' + myCate + '"'
@@ -148,5 +149,6 @@ else
 	else
 		puts "Can't open file: " + $filename
 	end
+	puts $filename
 end
 
