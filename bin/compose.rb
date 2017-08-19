@@ -19,6 +19,20 @@ def getCat
 	if mychs.empty?
 		mychs = mychs + '5'
 	end
+	case mychs.to_i
+	when 0
+		$filename = "_posts/miracles/" + $filename
+	when 1
+		$filename = "_posts/thinking/" + $filename
+	when 2
+		$filename = "_posts/feeling/" + $filename
+	when 3
+		$filename = "_posts/life/" + $filename
+	when 4
+		$filename = "_posts/tech/" + $filename
+	else
+		$filename = "_posts/others/" + $filename
+	end
 	cateArray[mychs.to_i]
 end
 
@@ -52,7 +66,7 @@ def getTag
 			puts("#@i " + tagArray2[@i] )
 			@i += 1
 		end
-		puts "Enter more tags<1>:"
+		puts "Enter more tags<null to quit>:"
 		mychs2 = String.new(gets)
 		mychs2.chomp!
 		mychs2.strip!
@@ -66,12 +80,12 @@ end
 
 time = Time.new
  
+$filename = ""
 puts "Enter prefered filename:"
 myStr = String.new(gets)
 myStr.chomp!
 myStr.strip!
 myStr.gsub!(' ', '_')
-filename = myStr
 if myStr.empty?
 	puts "null invalid filename, quit"
 else
@@ -79,12 +93,12 @@ else
 	puts myStr
 	up_myStr = myStr.upcase
 	myStr[0] = up_myStr[0] unless up_myStr.empty?
-	filename = time.strftime("%Y-%m-%d-") + filename
+	$filename = time.strftime("%Y-%m-%d-") + myStr
 	if myStr.include?'.'
-		puts filename 
+		puts $filename 
 	else
-		filename = filename + ".md"
-		puts filename 
+		$filename = $filename + ".md"
+		puts $filename 
 	end
 
 	puts
@@ -120,15 +134,19 @@ else
 	puts "tags: " + myTag
 	puts "---"
 
-	aFile = File.new(filename, "a+")
-	aFile.puts "---"
-	aFile.puts "layout: post"
-	aFile.puts "title: " + '"' + myTitle + '"'
-	aFile.puts "date: " + time.strftime("%Y-%m-%d %H:%M:%S %z")
-	aFile.puts "subtitle: " + '"' + mySubtitle + '"' unless mySubtitle.empty?
-	aFile.puts "categories: " + '"' + myCate + '"'
-	aFile.puts "tags: " + myTag
-	aFile.puts "---"
-	aFile.close
+	aFile = File.new($filename, "a+")
+	if aFile
+		aFile.puts "---"
+		aFile.puts "layout: post"
+		aFile.puts "title: " + '"' + myTitle + '"'
+		aFile.puts "date: " + time.strftime("%Y-%m-%d %H:%M:%S %z")
+		aFile.puts "subtitle: " + '"' + mySubtitle + '"' unless mySubtitle.empty?
+		aFile.puts "categories: " + '"' + myCate + '"'
+		aFile.puts "tags: " + myTag
+		aFile.puts "---"
+		aFile.close
+	else
+		puts "Can't open file: " + $filename
+	end
 end
 
