@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "【原创】Android Camera HAL Loading"
+title: "【原创】Android Camera HAL Searching"
 date: 2017-08-20 19:19:18 +0800
 categories: "技术"
 tags: ["原创","Camera","Android"]
 ---
-#### The steps of loading Camera HAL module
+#### The steps of searching Camera HAL module
 1. looking for the .so file in following 3 pathes:<br>
 "/system/lib/hw"<br>
 "/vendor/lib/hw"<br>
