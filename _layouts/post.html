@@ -87,7 +87,8 @@ layout: default
 							{% if tag[0] == page_tag %}
 							  {% assign pages_list = tag[1] %}
 							   {% for post in pages_list %}
-							    {% if post.title != page.title %}
+							    {% if post.title == page.title or titlestr contains post.title %}
+							    {% else %}
 							    <span class="ai-meta">
 								    &nbsp;&nbsp; <sup>{{ post.date | date: "%Y-%m-%d" }}</sup>
 							    </span>
