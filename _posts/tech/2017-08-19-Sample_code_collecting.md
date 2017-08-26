@@ -52,6 +52,10 @@ int main()
 
     if (property_get_bool("debug.test.cam", 0))
         ALOGE("Is true");
+
+    ALOGI("cdb: %d %s %s", __LINE__, __func__, __FILE__);
+    ALOGE("cdb: %d %s %s", __LINE__, __func__, __FILE__);
+    ALOGW("cdb: %d %s %s", __LINE__, __func__, __FILE__);
 ```
 
 ---
