@@ -145,6 +145,6 @@ index 49949cf..0debcbd 100644
 +
 ```
 
-用自己的GoldCam测试，截屏纪念一下。这当然没有任何美感，不过可以使用了。以后不用真实的usb camera也可以打开camera做测试，所以将来可以在虚拟机里跑Android X86，可以省占用一台电脑。
+用自己的<a href="{{ site.baseurl }}{% post_url tech/2017-06-27-GoldCam %}">GoldCam</a>测试，截屏纪念一下。这当然没有任何美感，不过可以使用了。以后不用真实的usb camera也可以打开camera做测试，所以将来可以在虚拟机里跑Android X86，可以省占用一台电脑。
 
 ![图片]({{ site.baseurl }}/images/x86camhal/x86camhal.png)<br>
