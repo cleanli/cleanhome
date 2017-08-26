@@ -3,7 +3,7 @@ layout:     post
 title:      "【原创】Android x86上的Camera HAL"
 date:       2017-08-12 10:58:48 +0800
 categories: 技术
-tags: ["原创",Android,Camera]
+tags: ["原创",Camera,Android]
 ---
 在Android x86的源码里面，Camera HAL的目录在`hardware/libcamera`。Camera Module定义在`hardware/libcamera/CameraHal.cpp`
 ```cpp
