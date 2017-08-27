@@ -10,4 +10,4 @@ tags: ["收藏"]
 - [Google Android](https://source.android.com)
 - [Ruby教程](http://www.runoob.com/ruby/ruby-tutorial.html)
 - [stack overflow](https://stackoverflow.com/)
-- [APK HERE](http://http://www.apkhere.com)
+- [APK HERE](http://www.apkhere.com)
