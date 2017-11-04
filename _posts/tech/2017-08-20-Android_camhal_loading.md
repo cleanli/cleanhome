@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "【原创】Android Camera HAL Searching"
+title: "【原创】Steps of Camera HAL Module Searching"
 date: 2017-08-20 19:19:18 +0800
 categories: "技术"
 tags: ["原创","Camera","Android"]
