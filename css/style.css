@@ -49,7 +49,7 @@
     padding: .5em 2% 1em;
 }
 
-@media all and (min-width: 480px) {
+@media only screen and (min-width: 480px) {
     #main {
         margin: 1em 1% 0 1%;
         width: 74%;
@@ -62,7 +62,7 @@
     }
 }
 
-@media all and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     #main {
         margin: 1em 2% 0 5%;
         width: 68%;
@@ -75,7 +75,7 @@
     }
 }
 
-@media all and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
     #main {
         margin: 1em 2% 0 10%;
         width: 60%;
@@ -104,7 +104,7 @@
     padding: .5em;
 }
 
-@media all and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     #main section.post a {
         padding: 1em
     }
@@ -179,7 +179,7 @@
     padding: .5em !important;
 }
 
-@media all and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     #archive-page section.post a time {
         padding-left: 1em
     }
@@ -214,7 +214,7 @@
     border-left: .5em solid #ccc;
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     .archive-title {
         margin: 2em 0;
         width: 18.5%;
@@ -251,13 +251,13 @@
     color: #ea6753 !important
 }
 
-@media all and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .archive-part {
         min-height: 200px
     }
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     .archive-part {
         float: right;
         margin-left: 2% !important
@@ -273,19 +273,19 @@
     float: left;
 }
 
-@media all and (max-width: 568px) {
+@media only screen and (max-width: 568px) {
     .archive-part section.post time {
         width: 100%
     }
 }
 
-@media all and (min-width: 568px) {
+@media only screen and (min-width: 568px) {
     .archive-part section.post time {
         width: 20%
     }
 }
 
-@media all and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .archive-nav {
         width: 100%;
         float: left;
@@ -310,7 +310,7 @@
     color: #ea6753
 }
 
-@media all and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     article header.article-info {
         border-bottom: 1px solid #dbdbdb
     }
@@ -466,7 +466,7 @@ section.comment {
     content: "\f0c9"
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     .closeaside {
         display: block;
         position: absolute;
@@ -481,7 +481,7 @@ section.comment {
     padding: .5em 2% 1em;
 }
 
-@media all and (min-width: 480px) {
+@media only screen and (min-width: 480px) {
     #asidepart {
         position: relative;
         float: left;
@@ -490,7 +490,7 @@ section.comment {
     }
 }
 
-@media all and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     #asidepart {
         position: relative;
         float: left;
@@ -499,7 +499,7 @@ section.comment {
     }
 }
 
-@media all and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
     #asidepart {
         position: relative;
         float: left;
@@ -528,7 +528,7 @@ section.comment {
     transition: color 0.5s
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     .categorieslist {
         width: 100%;
         float: none;
@@ -553,7 +553,7 @@ section.comment {
     margin: 1em 0 0;
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     .tagslist {
         width: 100%;
         float: none;
@@ -586,7 +586,7 @@ section.comment {
     width: 100%;
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     .rsspart {
         width: 100%;
         float: none;
@@ -618,7 +618,7 @@ section.comment {
     padding-right: 1em;
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     .archiveslist {
         width: 100%;
         float: none;
@@ -665,13 +665,13 @@ section.comment {
     margin: .3em;
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     .archive-float li {
         float: none
     }
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     .tagcloudlist {
         width: 100%;
         float: none;
@@ -698,7 +698,7 @@ section.comment {
     margin-top: .2em;
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     .linkslist {
         width: 100%;
         float: none;
@@ -730,7 +730,7 @@ section.comment {
     margin-top: .2em;
 }
 
-@media all and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
     .ab {
         width: 100%;
         float: none;
