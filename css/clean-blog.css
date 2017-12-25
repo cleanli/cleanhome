@@ -513,8 +513,8 @@ article hr {
     padding: 0;
   }
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, "SimSun", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-    font-size: 200%;
-    font-weight: 700;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 22px;
+    font-weight: 100;
   }
 }
