@@ -6,7 +6,8 @@
 
 body {
   /*font-family: 'Lora', 'Times New Roman', serif;*/
-  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  /*font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;*/
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 16px;
   color: #000000;
 }
@@ -510,5 +511,10 @@ article hr {
     display: none;
     margin: 0;
     padding: 0;
+  }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, "SimSun", "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 200%;
+    font-weight: 700;
   }
 }
