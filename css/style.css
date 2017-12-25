@@ -757,3 +757,23 @@ section.comment {
     -ms-transition: color 0.25s;
     transition: color 0.25s
 }
+
+@media only print {
+    #main {
+        margin: 0 0 0 0;
+        width: 100%;
+        float: left;
+        -webkit-transition: margin 0.5s ease-out;
+        -moz-transition: margin 0.5s ease-out;
+        -o-transition: margin 0.5s ease-out;
+        -ms-transition: margin 0.5s ease-out;
+        transition: margin 0.5s ease-out
+    }
+    #asidepart {
+	display: none;
+        position: relative;
+        float: left;
+        width: 0%;
+        margin: 0 0 0 0
+    }
+}

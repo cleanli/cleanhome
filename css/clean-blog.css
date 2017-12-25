@@ -493,7 +493,7 @@ article hr {
 .pages_choose {
 	text-align:center;
 }
-@media print {
+@media only print {
   a[href]:after {
     content: "";
   }
@@ -503,5 +503,10 @@ article hr {
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
+  }
+  footer .list-inline {
+    display: none;
+    margin: 0;
+    padding: 0;
   }
 }
