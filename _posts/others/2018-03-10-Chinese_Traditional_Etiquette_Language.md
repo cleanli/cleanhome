@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "中华传统礼仪用语"
+title: "【转载】中华传统礼仪用语"
 date: 2018-03-10 10:44:02 +0800
 categories: "其他"
 tags: ["转载","文化"]
