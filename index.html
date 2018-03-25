@@ -5,7 +5,6 @@ description: "黎涛的博客"
 
 {% if paginator.previous_page %}
 {% else %}
-<h4 class="index_hint"><a href="{{ site.baseurl }}/about.html">{{ site.blog_owner }}</a></h4>
 <h4 class="index_hint">置顶文章</h4>
 {% for post in site.posts %}
 {% if post.settop == true %}
@@ -59,6 +58,8 @@ description: "黎涛的博客"
 <hr>
 {% endif %}
 {% endfor %}
+<hr>
+<hr>
 <h4 class="index_hint">最新的文章</h4>
 {% endif %}
 {% for post in paginator.posts %}
