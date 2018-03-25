@@ -5,9 +5,10 @@ description: "黎涛的博客"
 
 {% if paginator.previous_page %}
 {% else %}
-<h4 class="index_hint"><a href="{{ site.baseurl }}/about.html">{{ site.blog_owner }}</a>最新的文章</h4>
-{% endif %}
-{% for post in paginator.posts %}
+<h4 class="index_hint"><a href="{{ site.baseurl }}/about.html">{{ site.blog_owner }}</a></h4>
+<h4 class="index_hint">置顶文章</h4>
+{% for post in site.posts %}
+{% if post.settop == true %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
@@ -50,6 +51,59 @@ description: "黎涛的博客"
                 <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] | replace:' ','-' }}">
                     {{ tag[0] | capitalize }}({{ tag[1].size }})
                 </a>  
+        {% endfor %}
+      {% endif %}
+      {% assign tags_list = nil %}
+    </p>
+</div>
+<hr>
+{% endif %}
+{% endfor %}
+<h4 class="index_hint">最新的文章</h4>
+{% endif %}
+{% for post in paginator.posts %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">            {{ post.title }}
+        </h2>
+    </a>
+        {% if post.subtitle %}
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+    </a>
+        {% endif %}
+    <p class="post-meta">发表于{{ post.date | date: "%Y-%m-%d" }} &nbsp;&nbsp; 类别:
+      {% assign categories_list = post.categories %}
+      {% if categories_list.first[0] == null %}
+        {% for category in categories_list %}
+                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category | replace:' ','-' }}">
+                  {{ category | capitalize }}({{ site.categories[category].size }})
+               </a>
+        {% endfor %}
+      {% else %}
+        {% for category in categories_list %}
+                <a href="{{ site.baseurl }}/{{ site.categories_path }}#{{ category[0] | replace:' ','-' }}">
+                    {{ category[0] | capitalize }}({{ category[1].size }})
+                </a>
+        {% endfor %}
+      {% endif %}
+      {% assign categories_list = nil %}
+
+    &nbsp;&nbsp; 标签:
+      {% assign tags_list = post.tags %}
+      {% if tags_list.first[0] == null %}
+        {% for tag in tags_list %}
+                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag | replace:' ','-' }}">
+                  {{ tag | capitalize }}({{ site.tags[tag].size }})
+               </a>
+        {% endfor %}
+      {% else %}
+        {% for tag in tags_list %}
+                <a href="{{ site.baseurl }}/{{ site.tags_path }}#{{ tag[0] | replace:' ','-' }}">
+                    {{ tag[0] | capitalize }}({{ tag[1].size }})
+                </a>
         {% endfor %}
       {% endif %}
       {% assign tags_list = nil %}

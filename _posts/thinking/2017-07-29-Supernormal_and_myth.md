@@ -5,6 +5,7 @@ subtitle: 不可思议的事实与古人的传说
 date:   2017-07-29 11:44:24 +0800
 categories: 思考
 tags: ["原创","奇迹"]
+settop: true
 header-img: "img/post-bg-01.jpg"
 ---
 在本博客的[探索]({{ site.baseurl }}/categories.html#探索)类别里收藏了一些真实发生的超常事件，虽然让人们觉得不可思议，但是仔细思考一下，这些事件与古人留下来的一些传说却是可以吻合的。下面把它们的对应关系列了一个表：

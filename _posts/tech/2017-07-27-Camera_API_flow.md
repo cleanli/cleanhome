@@ -3,6 +3,7 @@ layout:     post
 title:      "【原创】Camera不同版本API与HAL流程"
 date:       2017-07-27 08:29:40 +0800
 categories: 技术
+settop: true
 tags: ["原创",Android,Camera]
 ---
 **注**：以下code基于Android nougat-x86 (Android 7.0 release) (Nougat)，最后同步时间2017-06-06。获取code方法参考：<a href="{{ site.baseurl }}{% post_url tech/2017-06-05-Android_N_build_java_out_of_memory %}">【记录】编译测试Android nougat-x86</a>
