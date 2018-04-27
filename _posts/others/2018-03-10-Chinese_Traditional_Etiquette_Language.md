@@ -2,7 +2,7 @@
 layout: post
 title: "【转载】中华传统礼仪用语"
 date: 2018-03-10 10:44:02 +0800
-categories: "其他"
+categories: "其它"
 tags: ["转载","文化"]
 ---
 Clean注：收集于网络，略有整理。
