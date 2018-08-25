@@ -59,6 +59,6 @@ main
 
 2 将vcf文件另存为同目录下`original.vcf`
 
-3 运行命令`ruby transfer_vcf.rb`，就会看到同目录下生成了一个`transfered.txt`
+3 打开cmd命令窗口，进入该目录，运行命令`ruby transfer_vcf.rb`，就会看到同目录下生成了一个`transfered.txt`；或者直接在文件浏览器里双击`transfer_vcf.rb`运行即可
 
 最后生成的文件中去掉了无用的行，只留下名字和电话信息，并加了计数。
