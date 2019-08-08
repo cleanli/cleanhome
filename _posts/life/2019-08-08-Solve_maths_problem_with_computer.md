@@ -12,17 +12,12 @@ tags: ["原创"]
 
 先搭建编译环境，在windows下安装gcc，网上找了一下步骤，记录一下方法：
 
-1 到www.mingw.org，点Downloads，点mingw-get-setup.exe下载，运行，点击Install，安装到C:\MinGW，这是安装包管理器
-
-2 包管理器安装好后，在其界面上选择mingw32-gcc-g++-bin，右键点击Mark for Installation，然后点击左上角的Installation菜单中的Apply changes选项，管理器开始在线安装。
-
-3 安装完成后关闭包管理器，配置环境变量，打开控制面板 -> 系统 -> 高级系统设置 -> 高级 -> 环境变量，增加PATH，设为C:\MinGW\bin
-
-4 打开命令行，运行gcc -v，出现版本号，安装成功
-
-5 因为我习惯在ubuntu下的终端中编辑程序，所以又安装了Git，里面自带的终端用起来比较习惯
-
-6 测试一下编译程序，先写了一个hello world，运行gcc m.c后没有反应。
+*1 到www.mingw.org，点Downloads，点mingw-get-setup.exe下载，运行，点击Install，安装到C:\MinGW，这是安装包管理器<br>
+2 包管理器安装好后，在其界面上选择mingw32-gcc-g++-bin，右键点击Mark for Installation，然后点击左上角的Installation菜单中的Apply changes选项，管理器开始在线安装。<br>
+3 安装完成后关闭包管理器，配置环境变量，打开控制面板 -> 系统 -> 高级系统设置 -> 高级 -> 环境变量，增加PATH，设为C:\MinGW\bin<br>
+4 打开命令行，运行gcc -v，出现版本号，安装成功<br>
+5 因为我习惯在ubuntu下的终端中编辑程序，所以又安装了Git，里面自带的终端用起来比较习惯<br>
+6 测试一下编译程序，先写了一个hello world，运行gcc m.c后没有反应。换到windows下的cmd窗口运行，弹出窗口`找不到libmpc-3.dll`的error，网上找到解决办法，运行`mingw-get install mpc`，可以编译了，但报error：<br>*
 
 ```
 $ gcc m.c
@@ -34,7 +29,7 @@ c:\mingw\include\_mingw.h:174:10: fatal error: features.h: No such file or direc
 compilation terminated.
 ```
 
-于是在`c:\mingw\include\`下面创建了一个空的features.h，问题解决了。
+*于是在`c:\mingw\include\`下面创建了一个空的features.h，问题解决了。<br>*
 
 源码如下：
 
