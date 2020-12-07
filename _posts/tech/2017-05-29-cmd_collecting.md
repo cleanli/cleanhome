@@ -22,12 +22,31 @@ header-img: "img/post-bg-01.jpg"
 <a id="part01"></a>
 ### Android Debug
 ---
+update framework.jar
+```
+$ adb root
+$ adb remount
+$ adb push framework.jar /system/framework
+$ adb shell rm -rf /system/framework/arm
+$ adb shell rm -rf /system/framework/arm64
+$ adb shell rm -rf /data/dalvik-cache/arm
+$ adb shell rm -rf /data/dalvik-cache/arm64
+$ adb reboot
+```
+---
 CTS
 ```
 run cts --retry ID (before Android P)
 run retry --retry ID (>=Android P)
 run cts --shared-count 4 (4 devices)
 run cts -a arm64-v8a -m CtsCameraTestCases -t ...
+```
+---
+VTS & STS
+```
+vts-tf> run vts -m VtsHalCameraProviderV2_4Target
+run sts-engbuild
+run sts-userbuild
 ```
 ---
 自动间隔执行
@@ -40,10 +59,17 @@ adb pull文件列表
 ```
 adb shell ls /system/lib/*13850* | tr '\n\r' ' ' | xargs -n1 adb pull
 ```
-adb logcat buffer
+adb其他相关命令 
 ```
 adb logcat -G 20M //set log buffer 20M
 adb logcat -g //get log buffer size
+adb shell input draganddrop 700 2400 400 2400 40000
+adb shell input keyevent 4
+adb shell input tap 900 1600
+adb disable-verity
+adb shell dumpsys package
+adb shell am start -n com.android.camera.pro/.Main
+adb shell am start -n com.clean.goldcamera/.MainActivity
 ```
 ---
 
@@ -64,6 +90,11 @@ arm-eabi-objdump -d -S libcamera.so > /tmp/asm
 <a id="part02"></a>
 ### Git
 ---
+```
+repo manifest -o snapshot.xml -r
+repo forall -p -c <git_cmd>
+```
+---
 
 git退回某个文件到某个版本
 ```
@@ -80,6 +111,18 @@ vim查找关键字并删除所有包含关键字的行
 ```
 :g/keyword/d
 ```
+多行缩进：
+'V'进入Visual模式，'>' indent, '<' deindent
+
+其他命令
+```
+:let Tlist_WinWidth=80
+:set mouse=a //开启鼠标
+:set expandtab //空格取代tab，个数由tabstop定义
+:set tabstop=4
+:retab //设置expandtab后，运行此命令原有的tab也会变成空格
+:set shiftwidth=4 //回车后自动缩进宽度
+```
 ---
 
 [返回目录](#index)
@@ -87,6 +130,7 @@ vim查找关键字并删除所有包含关键字的行
 ### Ubuntu
 ---
 apt get install "too many errors"
+
 清空 /var/lib/dpkg/info
 ```
 sudo apt-get -f install
@@ -136,6 +180,11 @@ $ sudo apt list
 安装gimp
 ```
 sudo apt-get install gimp
+```
+---
+其他
+```
+ssh-keygen
 ```
 ---
 

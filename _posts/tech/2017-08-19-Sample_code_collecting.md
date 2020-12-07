@@ -37,6 +37,23 @@ int main()
 
 ---
 
+#### 常用code
+```cpp
+#include <stdio.h>
+perror("message");
+fflush(stdout);
+printf("%ld\n", ftell(fp));
+fseek(fp, 2, SEEK_SET);
+
+#include <unstd.h>
+getopt(x, x, x);
+
+String8 tpath;
+tpath = tpath.format("/data/");
+```
+
+---
+
 #### Android property
 ```cpp
 #include <cutils/log.h>
@@ -84,6 +101,10 @@ LOCAL_C_INCLUDES += \
     
 LOCAL_MODULE:= cameratest
 include $(BUILD_EXECUTABLE)
+
+######
+
+$(warning Message_to_show $(YY))
 
 ######
 
