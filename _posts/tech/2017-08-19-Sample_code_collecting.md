@@ -46,12 +46,81 @@ printf("%ld\n", ftell(fp));
 fseek(fp, 2, SEEK_SET);
 
 #include <unstd.h>
-getopt(x, x, x);
+int main(int argc, char *argv[])
+{
+    int ch;
+    while((ch = getopt(argc,argv,"s:pj:"))!= -1)
+    {
+        //putchar(ch);
+        //printf("\n");
+        //fflush(stdout);
+        switch(ch)
+        {
+            case 's':
+                printf("option s:'%s'\n",optarg);
+                /*handle code*/
+                break;
+            case 'p':
+                /*handle code*/
+                break;
+            case 'j':
+                printf("option s:'%s'\n",optarg);
+                /*handle code*/
+                break;
+            default:
+                printf("other option: %c\n", ch);
+        }
+    }
+}
 
 String8 tpath;
 tpath = tpath.format("/data/");
 ```
 
+---
+
+#### capture script
+```sh
+#!/system/bin/sh
+
+filename=`date +%Y%m%d-%H%M%S`
+filename=capture_${filename}
+date>/data/${filename}
+i=0
+while true
+do
+    i=$((i+1))
+    input keyevent 27
+    echo "capture $i" >> /data/${filename}
+    sleep 6
+done
+```
+---
+#### Android Mutex
+
+```cpp
+#include <utils/Mutex.h>
+
+Mutex mTest;
+
+void func()
+{
+    Mutex::Autolock l(mTest);
+}
+
+void another_func()
+{
+    status_t ret = mTest.tryLock();
+    if(ret != OK){//func is still running
+        ret = mTest.timedLock(2000000000/*2s*/);
+    }//wait for 2s
+    ...
+    if(ret == OK){
+        mTest.unlock()
+    }
+    ...
+}
+```
 ---
 
 #### Android property

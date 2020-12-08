@@ -49,6 +49,19 @@ run sts-engbuild
 run sts-userbuild
 ```
 ---
+Sepolicy
+```
+$ adb shell setenforce 0/1
+$ adb shell getenforce
+$ adb logcat | grep avc
+$ adb logcat -b kernel | grep avc
+
+build/make/core/version_defaults.mk
+    PLATFORM_SECURITY_PATCH := 2019-07-01
+```
+Check security on device: settings -> about
+
+---
 自动间隔执行
 ```
 watch -n 0.1 "adb shell cat /sys/devices/system/cpu/cpu1/cpufreq/scaling_cur_freq"
@@ -70,6 +83,16 @@ adb disable-verity
 adb shell dumpsys package
 adb shell am start -n com.android.camera.pro/.Main
 adb shell am start -n com.clean.goldcamera/.MainActivity
+```
+---
+adb "insufficient permission for device: verify udev rules"
+```
+$ sudo chmod +s adb
+$ lsusb
+$ sudo vi /etc/udev/rules.d/51-android.rules
+SUBSYSTEM=="usb", ATTR{idVendor}=="0bb4", ATTR{idProduct}=="0c81", MODE="0666", OWNER="xxx"
+$ sudo chmod a+x /etc/udev/rules.d/51-android.rules
+$ adb kill-server
 ```
 ---
 
