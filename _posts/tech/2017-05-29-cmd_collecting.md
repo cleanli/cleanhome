@@ -124,6 +124,20 @@ git退回某个文件到某个版本
 git reset a4e215234aa4927c85693dca7b68e9976948a35e MainActivity.java
 ```
 ---
+本地添加远程仓库并push
+```
+git init
+git add *
+git commit -m "first"
+git remote add origin https://github.com/cleanli/xxx.git
+git push -n origin master
+```
+本地创建远程仓库branch
+```
+git remote add origin https://github.com/cleanli/xxx.git
+git push origin new_branch
+```
+---
 
 [返回目录](#index)
 <a id="part03"></a>
@@ -224,6 +238,18 @@ powercfg /h /size 50
 powercfg /h on
 ```
 
+---
+win10备份/恢复驱动
+```
+C:\dism /online /export-driver /destinaton:E\Dirvers
+C:\dism /online /Add-driver /Driver:E:\Drivers /Recurse
+```
+---
+windows安装文件install.vim文件如果大于4G，不能放在fat32文件系统，需要拆分。<br>
+拆分命令(2000M=2G)
+```
+C:\dism /Split-Image /ImageFile:E:\sources\install.vim /SWMFile:D:\install.swm /FileSize:2000
+```
 ---
 
 [返回目录](#index)
