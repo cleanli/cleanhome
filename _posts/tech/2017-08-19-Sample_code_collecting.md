@@ -79,6 +79,26 @@ tpath = tpath.format("/data/");
 
 ---
 
+#### camera memory monitor
+```sh
+#!/system/bin/sh
+
+i=0
+times=150
+echo "camera memory usage" >/tmp/tmp.txt
+while [ $i -le $times ]
+do
+echo "#"$i
+adb shell cat /proc/meminfo |grep -w "MemFree\|Cached\|IonInUse" |tee -a /tmp/tmp.txt
+adb shell dumpsys meminfo com.android.camera2 |grep -w "Pss\|TOTAL\|MEMINFO\|Applications" |tee -a /tmp/tmp.txt
+adb shell dumpsys meminfo cameraserver |grep -w "Pss\|TOTAL\|MEMINFO\|Applications" |tee -a /tmp/tmp.txt
+sleep 10s
+let "i++"
+done
+
+```
+---
+
 #### capture script
 ```sh
 #!/system/bin/sh
