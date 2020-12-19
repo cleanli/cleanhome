@@ -108,6 +108,11 @@ objdump
 arm-eabi-objdump -d -S libcamera.so > /tmp/asm
 ```
 ---
+查看进程栈
+```
+debuggerd -b [<tid>]
+```
+---
 
 [返回目录](#index)
 <a id="part02"></a>
