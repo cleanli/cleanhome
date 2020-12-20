@@ -43,3 +43,7 @@ tags: ["原创","Camera","Android"]
 ---
 #### 录像中某一帧出现花屏
 高通8998。看现象很象是yuvimage的wxh不匹配。因为录像有做防抖功能，将原来大size的图像切割边缘变小size。于是取出问题帧，用工具设置成大size（出来的录像文件是小size），显示正常。确认是size不正确后，查看代码，发现做防抖处理的部分有判断条件调用qcom的`getOldestFrameNumber`，这个函数逻辑有问题，修复后解决。
+
+---
+#### camera预览画面卡住
+高通630升级P。在`mm-camera-interface`里面打开Qbuf、DQbuf的log，发现问题出现时，除了一个buffer，其他buffer都从kernel上来了。在QCamera3Channel.cpp中，回调函数streamCbRoutine为了保证出来的frames按顺序输出，会对frame number判断，如果有以前的frame没有上来，会缓存当前帧，等以前的frame来了之后，再一起返回framework层。但如果出现有一个frame卡在kernel不能回来到HAL，那其他的帧就会被缓存在HAL的streamCbRoutine函数，没有frame送回framework，framework就不会再发request下来，所以preview就卡住了。一个解决办法是在kernel把卡住的frame送回HAL，另外就是在HAL释放缓存的frame。
