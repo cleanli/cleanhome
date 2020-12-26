@@ -42,7 +42,42 @@ tags: ["原创","Camera","Android"]
 
 ---
 #### 录像中某一帧出现花屏
-高通8998。看现象很象是yuvimage的wxh不匹配。因为录像有做防抖功能，将原来大size的图像切割边缘变小size。于是取出问题帧，用工具设置成大size（出来的录像文件是小size），显示正常。确认是size不正确后，查看代码，发现做防抖处理的部分有判断条件调用qcom的`getOldestFrameNumber`，这个函数逻辑有问题，修复后解决。
+高通8998。看现象很象是yuvimage的wxh不匹配。因为录像有做防抖功能，将原来大size的图像切割边缘变小size。于是取出问题帧，用工具设置成大size（出来的录像文件是小size），显示正常。确认是size不正确后，查看代码，发现做防抖处理的部分有判断条件调用qcom的`getOldestFrameNumber`获取最早的frameNumber与当前的来的帧号比较，如果一致才做切割。而这个函数逻辑在某些情况下会错误的返回oldest为-1导致不做crop，这一帧就出现问题。修复后解决。
+
+下面code来自[androidos.net.cn:QCamera3Mem.cpp](https://www.androidos.net.cn/android/9.0.0_r8/xref/device/google/marlin/camera/QCamera2/HAL3/QCamera3Mem.cpp)
+
+```cpp
+int32_t QCamera3HeapMemory::getOldestFrameNumber(uint32_t &bufIndex)
+{
+    Mutex::Autolock lock(mLock);
+
+    int32_t oldest = INT_MAX;
+    bool empty = true;
+
+    for (uint32_t index = 0;
+            index < mBufferCount; index++) {
+        if (mMemInfo[index].handle) {
+-            if ((empty) || (!empty && oldest > mCurrentFrameNumbers[index]
+-                && mCurrentFrameNumbers[index] != -1)) {
++            if ((empty || (!empty && oldest > mCurrentFrameNumbers[index])) //Modification, when mCurrentFrameNumbers[0] == -1
++                && (mCurrentFrameNumbers[index] != -1)) {
+                oldest = mCurrentFrameNumbers[index];
+                bufIndex = index;
+            }
+            empty = false;
+        }
+    }
++   //Modification, keep same behavior when all mCurrentFrameNumbers[i] == -1
++   if(INT_MAX == oldest){
++       oldest = -1;
++   }
++   //Modification
+    if (empty)
+        return -1;
+    else
+        return oldest;
+}
+```
 
 ---
 #### camera预览画面卡住
