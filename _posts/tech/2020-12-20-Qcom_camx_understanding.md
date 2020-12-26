@@ -7,10 +7,34 @@ tags: ["原创","Android","Camera"]
 ---
 CHI（CamX Hardware Interface），高通提供的新的camera HAL架构中的camera硬件接口，源码位于`vendor/qcom/proprietary`的`camx`和`chi-cdk`。CHI定义于chi-cdk/cdk/chi/chi.h中。
 
-个人理解的camx和chi-cdk之间的调用关系图如下：
+个人总结的camx和chi-cdk之间的调用关系图如下：
 ![qcomcamx]({{ site.baseurl }}/images/qcom_camx.png)<br>
 
 在这个架构中，camera sensor的setting不是以header文件的形式，而是以xml的文件形式在chi-cdk/vendor/.../SENSOR_NAME_sensor.xml中。
+
+Sensor Bring up相关的一些文件：
+- Sensor driver XML files<br>
+chi-cdk/vendor/sensor/default/ov13855/ov13855_sensor.xml<br>
+chi-cdk/vendor/sensor/default/ov13855/ov13855_pdaf.xml<br>
+chi-cdk/vendor/sensor/default/ov13855/ov13855_sensor.cpp<br>
+(新版本PATH：chi-cdk/oem/qcom/sensor/sensor_name/sensor_name_sensor.xml)<br>
+- Module Configure files<br>
+chi-cdk/vendor/module/xxxx_ov13855_module.xml<br>
+(新版本PATH：chi-cdk/oem/qcom/module/modulename_module.xml)<br>
+- Submodule driver XML files<br>
+chi-cdk/vendor/ois/default_ois.xml<br>
+chi-cdk/vendor/actuator/default/xxxxxx_actuator.xml<br>
+chi-cdk/vendor/flash/xxx_sensor_flash.xml<br>
+chi-cdk/vendor/eeprom/at24c32e_eeprom.xml<br>
+(新版本PATH：chi-cdk/oem/qcom/sub-module-name/submodulename_submodule.xml)<br>
+(e.g.：chi-cdk/oem/qcom/actuator/xxxxxx_actuator.xml)<br>
+- Kernel dts files<br>
+包含camera sensor的硬件连接信息，如MCLK，RST，I2C总线，VCM/DVDD/AVDD/DOVDD<br>
+- The Driver binary files in the device vendor makefile to be included in the build<br>
+vendor/qcom/proprietary/common/config/device-vendor.mk<br>
+```
+    MM_CAMERA += com.qti.sensormodule.xxxxxx.bin
+```
 
 一些概念：<br>
 `request`：camera请求<br>
@@ -28,7 +52,7 @@ CHI（CamX Hardware Interface），高通提供的新的camera HAL架构中的ca
 `Live stream`：连续的stream，一般与sensor相连<br>
 `Offline stream`：非Live stream<br>
 
-pipeline在xml文件中定义：vendor/qcom/proprietary/chi-cdk/vendor/topology/default/titan17x_usecases.xml，编译时会根据此xml的配置生成对应vendor\qcom\proprietary\chi-cdk\vendor\chioverride\default\g_pipelines.h，
+pipeline在xml文件中定义：vendor/qcom/proprietary/chi-cdk/vendor/topology/default/titan17x_usecases.xml，编译时会根据此xml生成vendor\qcom\proprietary\chi-cdk\vendor\chioverride\default\g_pipelines.h
 
 `/vendor/qcom/proprietary/camx/src/core/camxsettings.xml`可以设置log打印级别，如：
 ```

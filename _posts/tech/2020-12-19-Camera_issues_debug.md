@@ -5,7 +5,7 @@ date: 2020-12-19 15:06:59 +0800
 categories: "技术"
 tags: ["原创","Camera","Android"]
 ---
-最近有一些变动，不知道将来是否还会做camera开发。在这里记录一些camera问题。
+最近有一些变动，不知道将来是否还会做camera开发，所以打算做一些camera的总结文章，以便将来需要的时候再学习。在这里先记录总结一些camera问题。
 
 #### 前置camera打不开
 高通770平台。log中发现有i2c error。经过调整i2c clock，以及进行retry都无法解决。于是写测试脚本进行专门前置camera开关测试，却发现无法复现。推测可能与使用camera操作的顺序有关，这可能是由于操作之间没有同步造成的。查看`cam_cci_core.c`文件，`cam_cci_core_cfg`这个函数会进行i2c操作的判断，在此函数进出加上log，发现出问题前两个camera的`MSM_CCI_INIT`操作和`MSM_CCI_I2C_WRITE`有重叠的情况，于是在`cam_cci_core_cfg`进出时加锁，问题解决。
