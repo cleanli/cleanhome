@@ -7,19 +7,22 @@ tags: ["原创","Android","Camera"]
 ---
 CHI（CamX Hardware Interface），高通提供的新的camera HAL架构中的camera硬件接口，源码位于`vendor/qcom/proprietary`的`camx`和`chi-cdk`。CHI定义于chi-cdk/cdk/chi/chi.h中。
 
+个人理解的camx和chi-cdk之间的调用关系图如下：
+![qcomcamx]({{ site.baseurl }}/images/qcom_camx.png)<br>
+
 在这个架构中，camera sensor的setting不是以header文件的形式，而是以xml的文件形式在chi-cdk/vendor/.../SENSOR_NAME_sensor.xml中。
 
 一些概念：<br>
 `request`：camera请求<br>
 `sub-request`：经拆分后的直接发送给CHI的request<br>
 `stream`：连续的同一size的frame的buffer流<br>
-`per-session setting`：session setting<br>
-`per-request setting`：request对应的setting<br>
+`per-session setting`：session setting，session创建后不可改变，比如是否支持图像防抖功能<br>
+`per-request setting`：request对应的setting，比如曝光时间<br>
 `Topology`：一个pipeline对应的各node连接的图<br>
 `Engine`：数据处理的单元，比如IFE<br>
 `Node`：组成pipeline的单位<br>
-`pipeline`：由一组Node组成的处理数据流的流水线<br>
-`session`：多个有关联的pipeline对应一个session<br>
+`pipeline`：由一组Node组成的处理数据流的流水线，定义了Engin如何使用，及数据处理流向<br>
+`session`：多个有关联的pipeline对应一个session，不可改变<br>
 `use case`：某一使用场景，比如某一preview size、某一拍照size的camera应用<br>
 `statistics`：图像统计数据<br>
 `Live stream`：连续的stream，一般与sensor相连<br>
