@@ -60,3 +60,5 @@ overrideLogLevels=0x1F
 logInfoMask=0xff80
 logVerboseMask=0x40000
 ```
+
+CHI对应的kernel部分的code为开源代码，网址：[codeeaurora:kernel/msm-4.9](https://source.codeaurora.org/quic/la/kernel/msm-4.9/)
