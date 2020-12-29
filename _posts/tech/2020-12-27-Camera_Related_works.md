@@ -5,6 +5,9 @@ date: 2020-12-27 16:32:08 +0800
 categories: "技术"
 tags: ["原创","Android","Camera"]
 ---
+
+Camera驱动部分的工作需要与camera硬件和光学部门的同事紧密配合。
+
 ---
 ### 1 设计阶段
 依据手机spec定义的camera部分的feature，参与确定camera sensor数量、规格
@@ -26,7 +29,7 @@ Camera 有效像素 * ADC色彩深度 * 帧率 * (1+20%) < lane数 * mipi速率<
 
 ---
 ### 2 Camera Bring up
-有如下几个步骤。
+有如下几个步骤，许多信息需要camera硬件及光学部门的支持。
 #### 2.1 准备工作
 ##### 2.1.1 camera sensor信息
 - Sensor type: Bayer/YUV
@@ -98,7 +101,7 @@ Camera 有效像素 * ADC色彩深度 * 帧率 * (1+20%) < lane数 * mipi速率<
 - 注意检查camera相关线程优先级（Thread Priority Verification），`renice -g [pid/tid]`，某些重要thread如果优先级低，可能会造成问题
 - 如果出现某些issue时，怀疑硬件信号有问题，可以在出现issue时，拉起某个测试gpio，这样使用示波器监控这个gpio，就可以抓到出问题时的信号进行检查
 - 如果camera出现等待某个锁，而卡死导致camera不能使用，可以尝试给锁加超时限制。
-- 如果camera无法恢复，可以尝试kill camera service，让camera系统重启（当然这是最后的办法）
+- 如果camera无法恢复，可以尝试self-kill camera service，让camera系统重启（当然这是最后的办法）
 
 ---
 ### 附2：Camera相关名词
