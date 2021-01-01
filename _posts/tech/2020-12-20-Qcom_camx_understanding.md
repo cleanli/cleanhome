@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "【原创】Camera总结之二：CHI"
+title: "【原创】Camera总结之二：驱动架构"
 date: 2020-12-20 11:45:02 +0800
 categories: "技术"
 tags: ["原创","Android","Camera"]
 ---
-最近有一些变动，不知道将来是否还会做camera开发，所以打算做一些camera的总结文章，以便将来需要的时候再学习。在这里总结一下对高通Camera的CHI架构的一些理解。
+最近有一些变动，不知道将来是否还会做camera开发，所以打算做一些camera的总结文章，以便将来需要的时候再学习。对camera驱动/HAL部分，不同平台实现都不一样；即使对高通来说，也有旧的mm-camera架构和新的CHI架构。在这里总结一下对高通Camera的CHI架构的一些理解。
 
 CHI（CamX Hardware Interface），高通提供的新的camera HAL架构中的camera硬件接口，源码位于`vendor/qcom/proprietary`的`camx`和`chi-cdk`。CHI定义于chi-cdk/cdk/chi/chi.h中。
 
