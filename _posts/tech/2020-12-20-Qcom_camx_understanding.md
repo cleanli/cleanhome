@@ -1,11 +1,19 @@
 ---
 layout: post
-title: "【原创】高通Camera的CHI的一些理解"
+title: "【原创】Camera总结之二：CHI"
 date: 2020-12-20 11:45:02 +0800
 categories: "技术"
 tags: ["原创","Android","Camera"]
 ---
+最近有一些变动，不知道将来是否还会做camera开发，所以打算做一些camera的总结文章，以便将来需要的时候再学习。在这里总结一下对高通Camera的CHI架构的一些理解。
+
 CHI（CamX Hardware Interface），高通提供的新的camera HAL架构中的camera硬件接口，源码位于`vendor/qcom/proprietary`的`camx`和`chi-cdk`。CHI定义于chi-cdk/cdk/chi/chi.h中。
+
+关于高通Camx-Chi的架构，发现网上已经有一些比较好的总结文章，收集如下：<br>
+[深入理解高通Camx CHI架构](https://segmentfault.com/a/1190000024445632)<br>
+[Qcom Camx架构（二）](https://segmentfault.com/a/1190000024445886)<br>
+[Android : Camera之CHI API](https://blog.csdn.net/zhong29/article/details/89430258)<br>
+[深入理解Android相机体系结构](https://blog.csdn.net/u012596975/article/details/107135938)<br>
 
 个人总结的camx和chi-cdk之间的调用关系图如下：
 ![qcomcamx]({{ site.baseurl }}/images/qcom_camx.png)<br>
@@ -29,7 +37,7 @@ chi-cdk/vendor/eeprom/at24c32e_eeprom.xml<br>
 (新版本PATH：chi-cdk/oem/qcom/sub-module-name/submodulename_submodule.xml)<br>
 (e.g.：chi-cdk/oem/qcom/actuator/xxxxxx_actuator.xml)<br>
 - Kernel dts files<br>
-包含camera sensor的硬件连接信息，如MCLK，RST，I2C总线，VCM/DVDD/AVDD/DOVDD<br>
+包含camera sensor的硬件连接信息，如MCLK，RST，I2C总线，AF_VDD/DVDD/AVDD/DOVDD<br>
 - The Driver binary files in the device vendor makefile to be included in the build<br>
 vendor/qcom/proprietary/common/config/device-vendor.mk<br>
 ```

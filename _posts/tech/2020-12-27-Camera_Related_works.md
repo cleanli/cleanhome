@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "【原创】Camera驱动开发工作总结"
+title: "【原创】Camera总结之三：工作内容"
 date: 2020-12-27 16:32:08 +0800
 categories: "技术"
 tags: ["原创","Android","Camera"]
 ---
+最近有一些变动，不知道将来是否还会做camera开发，所以打算做一些camera的总结文章，以便将来需要的时候再学习。在这里总结一下Camera驱动开发的一些工作内容。
 
 Camera驱动部分的工作需要与camera硬件和光学部门的同事紧密配合。
 
@@ -75,10 +76,11 @@ Camera 有效像素 * ADC色彩深度 * 帧率 * (1+20%) < lane数 * mipi速率<
 
 #### 2.3 相关tool
 在bring up起来之后，可以完成相关tool以support其他部门工作，比如calibration tool（包括lens shading，AWB）、focus test tool，或一些硬件测试或工厂需要的tool。<br>
-比如AWB calibration，就是需要计算在某一光源下纯白色的raw图像的R/G、B/G，并存储在ROM中。在打开camera时由driver取出以此校正AWB，从而使颜色正常，消除单个sensor差异。
+比如AWB calibration，就是需要计算在某一光源下纯白色的raw图像的各颜色通道增益比例，将之存储在EEROM中。在打开camera时由driver取出做校正，从而使AWB不致偏差太大，消除单个sensor差异。
 
 ---
 ### 3 Camera各feature实现
+Camera点亮之后，就是实现各feature，简要介绍如下：<br>
 - HDR：光线对比比较大的环境下拍照
 - Bokeh：背景虚化，一般需要两颗sensor
 - RTB：Realtime Bokeh，实时背景虚化
