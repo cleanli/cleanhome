@@ -246,7 +246,7 @@ powercfg /h on
 ---
 win10备份/恢复驱动
 ```
-C:\dism /online /export-driver /destinaton:E\Dirvers
+C:\dism /online /export-driver /destination:E:\Dirvers
 C:\dism /online /Add-driver /Driver:E:\Drivers /Recurse
 ```
 ---
