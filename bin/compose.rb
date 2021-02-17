@@ -59,7 +59,7 @@ def getTag
 	mytag = '["' + tagArray[mychs.to_i] + '"'
 	$myTitle = '【' + tagArray[mychs.to_i] + '】' + $myTitle
 
-	tagStr2 = String.new("奇迹,历史,电影,濒死体验,Shell,Android,特异功能,Selinux,搞笑,Camera,Vim,Makefile,预言,Git,法律,传说,修行,轮回转世,史前文明,Jekyll,博客技术,英语,文化,进化论,信仰,Ubuntu,购物,Linux,虚拟机,Windows,JavaScript,Grub,天文")
+	tagStr2 = String.new("奇迹,历史,电影,濒死体验,Shell,Android,特异功能,Selinux,搞笑,Camera,Vim,Makefile,预言,Git,法律,传说,修行,轮回转世,史前文明,Jekyll,博客技术,英语,文化,进化论,信仰,Ubuntu,购物,Linux,虚拟机,Windows,JavaScript,Grub,天文,硬件")
 	tagArray2 = tagStr2.split(',')
 	while true do
 		puts
