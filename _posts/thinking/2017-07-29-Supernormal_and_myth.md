@@ -22,7 +22,7 @@ header-img: "img/post-bg-01.jpg"
   <tbody>
     <tr>
       <td>建筑与风水</td>
-      <td><a href="{{ site.baseurl }}{% post_url miracles/2017-04-15-shanghai_dragon_pillar %}">【原创】上海延安路高架龙柱事件转载及分析</a></td>
+      <td><a href="{% post_url miracles/2017-04-15-shanghai_dragon_pillar %}">【原创】上海延安路高架龙柱事件转载及分析</a></td>
       <td>上海高架建设的关键桩位打不下去，最后请高僧帮助得以解决，而高僧也随后去世。此事目前有该柱子外面的龙形雕塑为证，上海几乎尽人皆知</td>
     </tr>
     <tr>
