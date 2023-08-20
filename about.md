@@ -9,7 +9,7 @@ header-img: "img/post-bg-02.jpg"
 
 所以联想到，人生也是一道题。每个人一生所为、所追求，其实也是在解题。那人的生命到底有多长时间，是不是真的只有三万天，就是限定条件了，直接关系能否正确解答人生这道题。
 
-黎涛，Clean Li，爱好广泛，更是人生探索者，因此把探索与思考的文章集中在另一个博客：<a href="{{ site.baseurl }}{% post_url thinking/2017-03-21-My_exploring_and_collecting %}">Clean的收藏</a>
+黎涛，Clean Li，爱好广泛，更是人生探索者，因此把探索与思考的文章集中在另一个博客：<a href="{% post_url thinking/2017-03-21-My_exploring_and_collecting %}">Clean的收藏</a>
 
 这里则尽量收录自己的全部文章，除了探索与思考，还有自己技术上的学习，生活与爱好等等。
 
