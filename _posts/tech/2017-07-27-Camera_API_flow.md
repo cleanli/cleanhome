@@ -6,7 +6,7 @@ categories: 技术
 settop: true
 tags: ["原创",Android,Camera]
 ---
-**注**：以下code基于Android nougat-x86 (Android 7.0 release) (Nougat)，最后同步时间2017-06-06。获取code方法参考：<a href="{{ site.baseurl }}{% post_url tech/2017-06-05-Android_N_build_java_out_of_memory %}">【记录】编译测试Android nougat-x86</a>
+**注**：以下code基于Android nougat-x86 (Android 7.0 release) (Nougat)，最后同步时间2017-06-06。获取code方法参考：<a href="{% post_url tech/2017-06-05-Android_N_build_java_out_of_memory %}">【记录】编译测试Android nougat-x86</a>
 
 总结了一下Camera App的API 1和API 2与HAL 1和HAL 3互相匹配的camera运行流程：
 

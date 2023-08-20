@@ -5,7 +5,7 @@ date: 2017-08-26 11:04:02 +0800
 categories: "技术"
 tags: ["原创","Camera","Android"]
 ---
-（接上篇）<a href="{{ site.baseurl }}{% post_url tech/2017-08-12-Android_x86_Camera_HAL %}">【原创】Android x86上的Camera HAL</a>
+（接上篇）<a href="{% post_url tech/2017-08-12-Android_x86_Camera_HAL %}">【原创】Android x86上的Camera HAL</a>
 
 再发现x86的Camera Hal的preview线程里面自己会延时，再去取preview的frame，这个比较不多见
 
@@ -145,6 +145,6 @@ index 49949cf..0debcbd 100644
 +
 ```
 
-用自己的<a href="{{ site.baseurl }}{% post_url tech/2017-06-27-GoldCam %}">GoldCam</a>测试，截屏纪念一下。这当然没有任何美感，不过可以使用了。以后不用真实的usb camera也可以打开camera做测试，所以将来可以在虚拟机里跑Android X86，可以省占用一台电脑。
+用自己的<a href="{% post_url tech/2017-06-27-GoldCam %}">GoldCam</a>测试，截屏纪念一下。这当然没有任何美感，不过可以使用了。以后不用真实的usb camera也可以打开camera做测试，所以将来可以在虚拟机里跑Android X86，可以省占用一台电脑。
 
 ![图片]({{ site.baseurl }}/images/x86camhal/x86camhal.png)<br>
