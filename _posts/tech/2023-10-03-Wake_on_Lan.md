@@ -37,6 +37,10 @@ tags: ["记录","硬件"]
 
 WakeMeOnLan软件下载：[wakemeonlan-x64.zip]({{ site.baseurl }}/downloads/wol/wakemeonlan-x64.zip)
 
+官网：[WakeMeOnLan](http://www.nirsoft.net/utils/wake_on_lan.html)
+
+校验码：`546d68b0e44fdf328fddba0e60d59eaa1fc8c514eacb0f19b52c1730a78a4007 wakemeonlan-x64.zip`
+
 ![pic]({{ site.baseurl }}/images/wol/wol_wake.png)<br>
 ### 五、Win10测试
 以上设置项在win10下没有成功，网卡属性里找不到唤醒相关选项。但直接使用WakeMeOnLan软件触发开机可以成功唤醒开机。
