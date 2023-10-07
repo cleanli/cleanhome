@@ -224,6 +224,19 @@ $ sudo apt list
 sudo apt-get install gimp
 ```
 ---
+交换分区/文件
+```
+free -h
+swapon --show
+sudo fallocate -l 16G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo swapoff /dev/sda5
+sudo vi /etc/fstab
+sudo reboot
+```
+---
 其他
 ```
 ssh-keygen
