@@ -270,6 +270,34 @@ C:\dism /Split-Image /ImageFile:E:\sources\install.vim /SWMFile:D:\install.swm /
 ```
 ---
 
+windows分区操作命令<br>
+```
+C:\diskpart
+
+Microsoft DiskPart 版本 6.2.9200
+
+Copyright (C) 1999-2012 Microsoft Corporation.
+在计算机上: Z
+
+DISKPART> list disk
+
+  磁盘 ###  状态           大小     可用     Dyn  Gpt
+  --------  -------------  -------  -------  ---  ---
+  磁盘 0    联机              100 GB      0 B
+
+DISKPART> select disk 0
+
+磁盘 0 现在是所选磁盘。
+
+DISKPART> list part
+
+  分区 ###       类型              大小     偏移量
+  -------------  ----------------  -------  -------
+  分区      1    主要                 350 MB  1024 KB
+  分区      2    主要                  99 GB   351 MB
+```
+---
+
 [返回目录](#index)
 <a id="part06"></a>
 ### Virtual Box
