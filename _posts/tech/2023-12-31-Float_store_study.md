@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "【原创】浮点数存储方式"
+title: "【记录】浮点数存储方式"
 date: 2023-12-31 11:50:47 +0800
 categories: "技术"
-tags: ["原创","Ubuntu","Linux"]
+tags: ["记录","Ubuntu","Linux"]
 ---
 
 最近遇到需要在嵌入式开发中使用浮点运算，所以研究了一下float的存储方式，记录一下。
