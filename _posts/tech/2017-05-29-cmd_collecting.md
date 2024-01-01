@@ -153,6 +153,10 @@ vim查找关键字并删除所有包含关键字的行
 ```
 :g/keyword/d
 ```
+vim每一行下面增加空行（\r与\n使用上有区别）
+```
+:%s/\n/\r\r/gc
+```
 多行缩进：
 'V'进入Visual模式，'>' indent, '<' deindent
 
